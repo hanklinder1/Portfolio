@@ -52,6 +52,9 @@ export default function AboutPage() {
             <p>
               My approach is grounded in economic principles—thinking systematically about incentives, trade-offs, and unintended consequences. I believe the best solutions come from combining rigorous analysis with practical product thinking.
             </p>
+            <p>
+              I&apos;m also passionate about incorporating Spanish into my professional work. As a fluent Spanish speaker with expertise in Spanish business formalities, I&apos;m excited about opportunities to apply my economic and data analytics skills in Spanish-speaking markets and collaborate with international teams. Whether it&apos;s building dashboards, conducting economic analysis, or presenting insights, I&apos;m committed to leveraging my Spanish language skills to create broader impact and reach.
+            </p>
           </div>
           <div className="mt-6">
             <Button href="/resume" variant="primary">Download Resume</Button>

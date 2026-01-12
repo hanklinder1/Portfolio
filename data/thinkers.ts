@@ -5,5 +5,5 @@ export const thinkers = [
   'Adam Smith',
   'Jesus',
   'Ayn Rand',
-  'Hayek',
+  'Friedrich Hayek',
 ];
