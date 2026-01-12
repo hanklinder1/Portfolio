@@ -16,4 +16,8 @@ export const skills: SkillCategory[] = [
     category: 'Product/Workflow',
     skills: ['GitHub', 'Jira/Agile', 'Excel modeling', 'Documentation', 'Stakeholder comms'],
   },
+  {
+    category: 'Languages',
+    skills: ['Fluent Spanish', 'Articulate Spanish business formalities', 'English (native)'],
+  },
 ];

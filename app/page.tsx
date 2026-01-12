@@ -57,11 +57,80 @@ export default function Home() {
         </div>
       </section>
 
+      {/* BMW Partnership Section */}
+      <section className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-20">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-8">
+            <div className="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-semibold mb-4">
+              Clemson University × BMW
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              Academic–Industry AI Partnership
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl">
+              Working directly with BMW on cutting-edge AI implementation analysis for automotive manufacturing—turning economic theory into real-world strategic decisions.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            <Card className="bg-white/5 backdrop-blur-sm border-white/10">
+              <h3 className="text-2xl font-bold mb-4">What We&apos;re Building</h3>
+              <p className="text-gray-300 mb-4 leading-relaxed">
+                An advanced economic modeling and dashboard platform that evaluates AI integration costs, risk tradeoffs, and strategic implementation decisions for BMW&apos;s manufacturing operations.
+              </p>
+              <p className="text-gray-300 leading-relaxed">
+                This project combines sophisticated economic analysis with interactive data visualization to help decision-makers navigate complex AI adoption scenarios in a high-stakes industrial environment.
+              </p>
+            </Card>
+
+            <Card className="bg-white/5 backdrop-blur-sm border-white/10">
+              <h3 className="text-2xl font-bold mb-4">Key Skills & Experience</h3>
+              <ul className="space-y-3 text-gray-300">
+                <li className="flex items-start">
+                  <span className="text-white font-semibold mr-2">•</span>
+                  <span><strong className="text-white">Economic Modeling:</strong> Building sophisticated cost-benefit models and Monte Carlo simulations to evaluate AI implementation scenarios</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-white font-semibold mr-2">•</span>
+                  <span><strong className="text-white">Dashboard Development:</strong> Creating interactive web-based dashboards using Python, Streamlit, and modern data visualization techniques</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-white font-semibold mr-2">•</span>
+                  <span><strong className="text-white">Project Management:</strong> Using Jira for agile workflow management, sprint planning, and cross-functional collaboration</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-white font-semibold mr-2">•</span>
+                  <span><strong className="text-white">Industry Collaboration:</strong> Working hand-in-hand with BMW employees and stakeholders in a high-impact, real-world setting</span>
+                </li>
+              </ul>
+            </Card>
+          </div>
+
+          <div className="flex flex-wrap gap-4">
+            <Button 
+              href="https://bmw-dashboard.vercel.app/" 
+              external 
+              variant="secondary"
+              className="bg-white text-gray-900 hover:bg-gray-100"
+            >
+              View Dashboard
+            </Button>
+            <Button 
+              href="/projects#bmw-ai-dashboard" 
+              variant="outline"
+              className="border-white text-white hover:bg-white/10"
+            >
+              Learn More
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Featured Projects */}
       <section className="bg-gray-50 py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader title="Featured Projects" />
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {featuredProjects.map((project) => (
               <Card key={project.id}>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
@@ -96,7 +165,7 @@ export default function Home() {
       <section className="py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader title="Skills" />
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {skills.map((category) => (
               <Card key={category.category}>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">{category.category}</h3>
