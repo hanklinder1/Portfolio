@@ -124,6 +124,6 @@ Portfolio/
 ## Notes
 
 - All placeholder links use `#` - replace with actual URLs when available
-- Email addresses are set to `hanklinder@example.com` - update to your actual email
+- Email address: `hank.linder1@gmail.com`
 - LinkedIn URL is a placeholder - update with your actual profile
 - The resume PDF is a placeholder - replace with your actual resume

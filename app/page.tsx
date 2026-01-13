@@ -12,9 +12,9 @@ import { skills } from '@/data/skills';
 export default function Home() {
   const featuredProjects = projects.filter(p => p.featured).slice(0, 3);
   const stats = [
-    { value: '10+', label: 'projects shipped' },
-    { value: '15+', label: 'dashboards/models built' },
-    { value: '20+', label: 'stakeholders supported' },
+    { value: '2+', label: 'projects shipped' },
+    { value: '3+', label: 'dashboards/models built' },
+    { value: '1+', label: 'stakeholders supported' },
   ];
 
   return (

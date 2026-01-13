@@ -17,7 +17,7 @@ export default function ContactPage() {
     e.preventDefault();
     const subject = encodeURIComponent(`Contact from ${formData.name}`);
     const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
-    window.location.href = `mailto:hanklinder@example.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:hank.linder1@gmail.com?subject=${subject}&body=${body}`;
     setSubmitted(true);
   };
 
@@ -104,10 +104,10 @@ export default function ContactPage() {
               <div>
                 <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
                 <a
-                  href="mailto:hanklinder@example.com"
+                  href="mailto:hank.linder1@gmail.com"
                   className="text-gray-600 hover:text-gray-900 transition-colors"
                 >
-                  hanklinder@example.com
+                  hank.linder1@gmail.com
                 </a>
               </div>
               <div>
@@ -141,7 +141,7 @@ export default function ContactPage() {
               I&apos;m always open to discussing new projects, opportunities, or just having a conversation about economics, data, and product development.
             </p>
             <div className="flex gap-3">
-              <Button href="mailto:hanklinder@example.com" variant="primary">
+              <Button href="mailto:hank.linder1@gmail.com" variant="primary">
                 Email Me
               </Button>
               <Button href="https://www.linkedin.com/in/hanklinder" external variant="outline">

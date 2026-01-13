@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 text-sm text-gray-600">
             <a
-              href="mailto:hanklinder@example.com"
+              href="mailto:hank.linder1@gmail.com"
               className="hover:text-gray-900 transition-colors"
               aria-label="Email Hank Linder"
             >
