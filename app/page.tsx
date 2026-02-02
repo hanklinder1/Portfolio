@@ -73,9 +73,12 @@ export default function Home() {
           {/* 2025 Section */}
           <div className="mb-12">
             <h3 className="text-2xl font-bold mb-4">BMW Manufacturing Data Project – 2025</h3>
-            <p className="text-gray-300 max-w-3xl leading-relaxed mb-6">
+            <p className="text-gray-300 max-w-3xl leading-relaxed mb-4">
               Early phase of the collaboration: exploratory data analysis, learning the manufacturing context, and initial data exploration. This foundational work established the context needed for the 2026 decision framework.
             </p>
+            <Button href="https://bmw-dashboard.vercel.app/" external variant="secondary" className="bg-white text-gray-900 hover:bg-gray-100 text-sm py-2 px-4">
+              View 2025 Dashboard
+            </Button>
           </div>
 
           {/* 2026 Section */}
@@ -109,9 +112,6 @@ export default function Home() {
           </div>
 
           <div className="flex flex-wrap gap-4">
-            <Button href="https://bmw-dashboard.vercel.app/" external variant="secondary" className="bg-white text-gray-900 hover:bg-gray-100">
-              View Dashboard
-            </Button>
             <Button href="/projects#bmw-2026" variant="outline" className="border-white text-white hover:bg-white/10">
               Learn More
             </Button>

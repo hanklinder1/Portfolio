@@ -23,7 +23,7 @@ export const projects: Project[] = [
     solution: 'Conducted exploratory data analysis and learned manufacturing workflows to establish a foundation for later modeling work.',
     impact: 'Established context and data familiarity that enabled the 2026 decision framework.',
     techStack: ['Data Analysis', 'Manufacturing Context', 'Exploratory Work'],
-    liveUrl: undefined,
+    liveUrl: 'https://bmw-dashboard.vercel.app/',
     githubUrl: 'https://github.com/hanklinder1',
     featured: true,
   },
@@ -36,9 +36,9 @@ export const projects: Project[] = [
     solution: 'Developed a risk-adjusted decision framework with SQL scoring logic, Tableau executive dashboard, and scenario parameters. Evaluates data readiness, operational/integration risk, organizational constraints, and risk-adjusted ROI.',
     impact: 'Provides decision support for manufacturing technology adoption with clear adopt/delay/reject recommendations.',
     techStack: ['PostgreSQL (Supabase)', 'SQL', 'Tableau Public', 'GitHub', 'Vercel'],
-    liveUrl: 'https://bmw-dashboard.vercel.app/',
+    liveUrl: undefined,
     githubUrl: 'https://github.com/hanklinder1',
-    tableauUrl: '#', // Add your Tableau Public dashboard URL
+    tableauUrl: 'https://public.tableau.com/app/profile/hank.linder/viz/BMW-StyleDataRiskValueDashboard/Dashboard2?publish=yes',
     featured: true,
   },
   {
