@@ -10,7 +10,8 @@ import { thinkers } from '@/data/thinkers';
 import { skills } from '@/data/skills';
 
 export default function Home() {
-  const featuredProjects = projects.filter(p => p.featured).slice(0, 3);
+  const featuredProjects = projects.filter(p => p.featured);
+  const bmw2026 = projects.find(p => p.id === 'bmw-2026');
   const stats = [
     { value: '2+', label: 'projects shipped' },
     { value: '3+', label: 'dashboards/models built' },
@@ -60,66 +61,58 @@ export default function Home() {
       {/* BMW Partnership Section */}
       <section className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-8">
+          <div className="mb-12">
             <div className="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-semibold mb-4">
               Clemson University × BMW
             </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Academic–Industry AI Partnership
+              Academic–Industry Partnership
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl">
-              Working directly with BMW on cutting-edge AI implementation analysis for automotive manufacturing—turning economic theory into real-world strategic decisions.
+          </div>
+
+          {/* 2025 Section */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold mb-4">BMW Manufacturing Data Project – 2025</h3>
+            <p className="text-gray-300 max-w-3xl leading-relaxed mb-6">
+              Early phase of the collaboration: exploratory data analysis, learning the manufacturing context, and initial data exploration. This foundational work established the context needed for the 2026 decision framework.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-8">
-            <Card className="bg-white/5 backdrop-blur-sm border-white/10">
-              <h3 className="text-2xl font-bold mb-4">What We&apos;re Building</h3>
-              <p className="text-gray-300 mb-4 leading-relaxed">
-                An advanced economic modeling and dashboard platform that evaluates AI integration costs, risk tradeoffs, and strategic implementation decisions for BMW&apos;s manufacturing operations.
-              </p>
-              <p className="text-gray-300 leading-relaxed">
-                This project combines sophisticated economic analysis with interactive data visualization to help decision-makers navigate complex AI adoption scenarios in a high-stakes industrial environment.
-              </p>
-            </Card>
+          {/* 2026 Section */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold mb-4">BMW Manufacturing Data Valuation & Decision Modeling – 2026</h3>
+            <p className="text-gray-300 max-w-3xl leading-relaxed mb-6">
+              Built a risk-adjusted decision framework to evaluate whether manufacturing plants should adopt, delay, or reject third-party technologies. The project focuses on data readiness, operational and integration risk, organizational constraints, and expected economic value (risk-adjusted ROI). The goal is decision support for manufacturing technology adoption—not just dashboards or reporting.
+            </p>
+            <div className="mb-6">
+              <h4 className="font-semibold text-white mb-2">Tech Stack</h4>
+              <p className="text-gray-300">PostgreSQL (Supabase) · SQL (views, scoring logic, scenario parameters) · Tableau Public · GitHub · Vercel</p>
+            </div>
 
-            <Card className="bg-white/5 backdrop-blur-sm border-white/10">
-              <h3 className="text-2xl font-bold mb-4">Key Skills & Experience</h3>
-              <ul className="space-y-3 text-gray-300">
-                <li className="flex items-start">
-                  <span className="text-white font-semibold mr-2">•</span>
-                  <span><strong className="text-white">Economic Modeling:</strong> Building sophisticated cost-benefit models and Monte Carlo simulations to evaluate AI implementation scenarios</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-white font-semibold mr-2">•</span>
-                  <span><strong className="text-white">Dashboard Development:</strong> Creating interactive web-based dashboards using Python, Streamlit, and modern data visualization techniques</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-white font-semibold mr-2">•</span>
-                  <span><strong className="text-white">Project Management:</strong> Using Jira for agile workflow management, sprint planning, and cross-functional collaboration</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-white font-semibold mr-2">•</span>
-                  <span><strong className="text-white">Industry Collaboration:</strong> Working hand-in-hand with BMW employees and stakeholders in a high-impact, real-world setting</span>
-                </li>
-              </ul>
-            </Card>
+            {/* SQL & Tableau Decision Dashboard */}
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6 mb-6">
+              <h4 className="text-xl font-bold mb-3">SQL & Tableau Decision Dashboard</h4>
+              <p className="text-gray-300 mb-4 leading-relaxed">
+                An interactive executive decision tool built in Tableau. Includes a plant × technology decision matrix, risk vs. value tradeoff visualization, and adoption blockers with remediation drivers. Full SQL logic and documentation are available on GitHub.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                {bmw2026?.tableauUrl && bmw2026.tableauUrl !== '#' && (
+                  <Button href={bmw2026.tableauUrl} external variant="secondary" className="bg-white text-gray-900 hover:bg-gray-100 text-sm py-2 px-4">
+                    Tableau Public Dashboard
+                  </Button>
+                )}
+                <Button href="https://github.com/hanklinder1" external variant="outline" className="border-white text-white hover:bg-white/10 text-sm py-2 px-4">
+                  GitHub (SQL & Docs)
+                </Button>
+              </div>
+            </div>
           </div>
 
           <div className="flex flex-wrap gap-4">
-            <Button 
-              href="https://bmw-dashboard.vercel.app/" 
-              external 
-              variant="secondary"
-              className="bg-white text-gray-900 hover:bg-gray-100"
-            >
+            <Button href="https://bmw-dashboard.vercel.app/" external variant="secondary" className="bg-white text-gray-900 hover:bg-gray-100">
               View Dashboard
             </Button>
-            <Button 
-              href="/projects#bmw-ai-dashboard" 
-              variant="outline"
-              className="border-white text-white hover:bg-white/10"
-            >
+            <Button href="/projects#bmw-2026" variant="outline" className="border-white text-white hover:bg-white/10">
               Learn More
             </Button>
           </div>

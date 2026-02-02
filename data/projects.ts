@@ -9,21 +9,36 @@ export interface Project {
   techStack: string[];
   liveUrl?: string;
   githubUrl?: string;
+  tableauUrl?: string;
   featured: boolean;
 }
 
 export const projects: Project[] = [
   {
-    id: 'bmw-ai-dashboard',
-    title: 'BMW AI Cost Dashboard',
-    summary: 'An interactive dashboard and economic model to evaluate cost structures, risk tradeoffs, and AI integration decisions.',
-    description: 'A comprehensive economic modeling tool and interactive dashboard for evaluating AI integration costs, risks, and tradeoffs for BMW.',
-    problem: 'Decision-makers needed a clear way to evaluate the economic implications of AI integration, including cost structures and risk tradeoffs.',
-    solution: 'Developed an interactive dashboard with Monte Carlo simulation capabilities to model various scenarios and their economic outcomes.',
-    impact: 'Provided data-driven insights that informed strategic AI integration decisions.',
-    techStack: ['Python', 'Pandas', 'Streamlit', 'Monte Carlo Simulation', 'Data Visualization'],
+    id: 'bmw-2025',
+    title: 'BMW Manufacturing Data Project – 2025',
+    summary: 'Foundational data exploration and early analysis of manufacturing context for the BMW collaboration.',
+    description: 'Exploratory phase of the BMW partnership: learning the manufacturing context, initial data analysis, and early data exploration.',
+    problem: 'Understanding manufacturing data structures and operational context before building decision support tools.',
+    solution: 'Conducted exploratory data analysis and learned manufacturing workflows to establish a foundation for later modeling work.',
+    impact: 'Established context and data familiarity that enabled the 2026 decision framework.',
+    techStack: ['Data Analysis', 'Manufacturing Context', 'Exploratory Work'],
+    liveUrl: undefined,
+    githubUrl: 'https://github.com/hanklinder1',
+    featured: true,
+  },
+  {
+    id: 'bmw-2026',
+    title: 'BMW Manufacturing Data Valuation & Decision Modeling – 2026',
+    summary: 'Risk-adjusted decision framework to evaluate whether manufacturing plants should adopt, delay, or reject third-party technologies.',
+    description: 'Built a risk-adjusted decision framework for manufacturing technology adoption. Focuses on data readiness, operational and integration risk, organizational constraints, and expected economic value (risk-adjusted ROI). Goal is decision support for technology adoption—not just dashboards or reporting.',
+    problem: 'Manufacturing plants need a structured way to decide whether to adopt, delay, or reject third-party technologies based on data readiness, risk, and economic value.',
+    solution: 'Developed a risk-adjusted decision framework with SQL scoring logic, Tableau executive dashboard, and scenario parameters. Evaluates data readiness, operational/integration risk, organizational constraints, and risk-adjusted ROI.',
+    impact: 'Provides decision support for manufacturing technology adoption with clear adopt/delay/reject recommendations.',
+    techStack: ['PostgreSQL (Supabase)', 'SQL', 'Tableau Public', 'GitHub', 'Vercel'],
     liveUrl: 'https://bmw-dashboard.vercel.app/',
-    githubUrl: '#',
+    githubUrl: 'https://github.com/hanklinder1',
+    tableauUrl: '#', // Add your Tableau Public dashboard URL
     featured: true,
   },
   {

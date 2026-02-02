@@ -41,10 +41,29 @@ export default function ProjectsPage() {
                 </div>
               </div>
 
+              {project.id === 'bmw-2026' && (
+                <div className="mb-6 p-4 bg-gray-50 rounded-lg border border-gray-200">
+                  <h3 className="font-semibold text-gray-900 mb-2">SQL & Tableau Decision Dashboard</h3>
+                  <p className="text-gray-600 mb-3">
+                    Interactive executive decision tool built in Tableau. Includes plant × technology decision matrix, risk vs. value tradeoff visualization, and adoption blockers with remediation drivers. Full SQL logic and documentation are available on GitHub.
+                  </p>
+                  {project.tableauUrl && project.tableauUrl !== '#' && (
+                    <Button href={project.tableauUrl} variant="primary" external className="text-sm py-2 px-4">
+                      View Tableau Dashboard
+                    </Button>
+                  )}
+                </div>
+              )}
+
               <div className="flex flex-wrap gap-3">
                 {project.liveUrl && project.liveUrl !== '#' && (
                   <Button href={project.liveUrl} variant="primary" external>
                     View Live
+                  </Button>
+                )}
+                {project.tableauUrl && project.tableauUrl !== '#' && (
+                  <Button href={project.tableauUrl} variant="primary" external>
+                    Tableau Dashboard
                   </Button>
                 )}
                 {project.githubUrl && project.githubUrl !== '#' && (
@@ -52,7 +71,7 @@ export default function ProjectsPage() {
                     View on GitHub
                   </Button>
                 )}
-                {(!project.liveUrl || project.liveUrl === '#') && (!project.githubUrl || project.githubUrl === '#') && (
+                {(!project.liveUrl || project.liveUrl === '#') && (!project.githubUrl || project.githubUrl === '#') && !project.tableauUrl && (
                   <span className="text-sm text-gray-500 italic">Links coming soon</span>
                 )}
               </div>
