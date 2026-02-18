@@ -31,7 +31,7 @@ export default function Home() {
               Economics • Data Analytics • AI & Product
             </p>
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              I specialize in quantitative analysis, AI-powered decision systems, Python-based economic modeling, and building deployable AI solutions—translating business problems into structured data frameworks and operationalizing analytics.
+              I specialize in quantitative analysis, AI system design, and end-to-end architecture—building deployable AI tools and decision systems that translate business problems into structured data frameworks, operationalize analytics, and support practical LLM/RAG integration.
             </p>
             <div className="flex flex-wrap gap-4 mb-8">
               <Button href="/projects" variant="primary">View Projects</Button>

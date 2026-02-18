@@ -47,7 +47,7 @@ export default function AboutPage() {
               I&apos;m an economics and data analytics professional with a passion for turning complex data into actionable insights. My work combines quantitative analysis, economic modeling, and product thinking to help organizations make better decisions.
             </p>
             <p>
-              I specialize in building AI-powered decision systems, Python-based economic modeling, and deployable AI solutions. Whether it&apos;s translating business problems into structured data frameworks, building cost-benefit models, or operationalizing analytics, I focus on turning complex challenges into actionable, data-driven systems.
+              I specialize in AI system design and end-to-end architecture—building deployable AI tools and decision systems. Whether it&apos;s translating business problems into structured data frameworks, building cost-benefit models, implementing retrieval/semantic search, or preparing practical LLM/RAG integrations, I focus on turning complex challenges into actionable, data-driven systems.
             </p>
             <p>
               My approach is grounded in economic principles—thinking systematically about incentives, trade-offs, and unintended consequences. I believe the best solutions come from combining rigorous analysis with practical product thinking.
