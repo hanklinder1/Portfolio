@@ -9,7 +9,7 @@ export default function ProjectsPage() {
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <SectionHeader 
         title="Projects"
-        subtitle="A collection of my work in data analytics, economic modeling, and product development."
+        subtitle="A collection of my work in AI-powered decision systems, data analytics, economic modeling, and building deployable AI solutions."
       />
       
       <div className="space-y-12">

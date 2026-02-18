@@ -14,7 +14,7 @@ export default function Home() {
   const bmw2026 = projects.find(p => p.id === 'bmw-2026');
   const stats = [
     { value: '2+', label: 'projects shipped' },
-    { value: '3+', label: 'dashboards/models built' },
+    { value: '10+', label: 'dashboards and analytical models across AI valuation, economic modeling, risk frameworks, and operational analytics' },
     { value: '1+', label: 'stakeholders supported' },
   ];
 
@@ -31,7 +31,7 @@ export default function Home() {
               Economics • Data Analytics • AI & Product
             </p>
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              I specialize in quantitative analysis, Python-based economic modeling, and dashboard development—turning messy data into clear, decision-ready insights.
+              I specialize in quantitative analysis, AI-powered decision systems, Python-based economic modeling, and building deployable AI solutions—translating business problems into structured data frameworks and operationalizing analytics.
             </p>
             <div className="flex flex-wrap gap-4 mb-8">
               <Button href="/projects" variant="primary">View Projects</Button>
@@ -85,7 +85,7 @@ export default function Home() {
           <div className="mb-12">
             <h3 className="text-2xl font-bold mb-4">BMW Manufacturing Data Valuation & Decision Modeling – 2026</h3>
             <p className="text-gray-300 max-w-3xl leading-relaxed mb-6">
-              Built a risk-adjusted decision framework to evaluate whether manufacturing plants should adopt, delay, or reject third-party technologies. The project focuses on data readiness, operational and integration risk, organizational constraints, and expected economic value (risk-adjusted ROI). The goal is decision support for manufacturing technology adoption—not just dashboards or reporting.
+              Built an AI-powered risk-adjusted decision framework to evaluate whether manufacturing plants should adopt, delay, or reject third-party technologies. The project focuses on data readiness, operational and integration risk, organizational constraints, and expected economic value (risk-adjusted ROI). This deployable AI solution translates business problems into structured data frameworks, operationalizing analytics for manufacturing technology adoption decisions.
             </p>
             <div className="mb-6">
               <h4 className="font-semibold text-white mb-2">Tech Stack</h4>
