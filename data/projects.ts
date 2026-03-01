@@ -80,13 +80,15 @@ export const projects: Project[] = [
   {
     id: 'barflow',
     title: 'BarFlow',
-    summary: 'A location-based social app that helps friends coordinate nights out with real-time presence and privacy controls.',
-    description: 'BarFlow is a mobile application designed to help friends coordinate social outings in real-time while maintaining privacy controls.',
-    problem: 'Coordinating group outings is difficult when people are scattered across different locations and have varying availability.',
-    solution: 'Built a location-based social app with real-time presence tracking, privacy controls, and group coordination features.',
-    impact: 'Enabled seamless coordination for friend groups while respecting user privacy preferences.',
-    techStack: ['React Native', 'Expo', 'Map Integration', 'Authentication', 'Backend API'],
-    liveUrl: '#',
+    summary: 'A real-time nightlife coordination app for college students—see where your friends are and coordinate nights out instantly.',
+    description:
+      'BarFlow is a real-time nightlife coordination app built for college students to answer one question quickly: where are my friends tonight? The platform combines live bar presence, friend discovery, direct messaging, and lightweight "nudge" invites in a mobile-first interface optimized for fast decisions while going out. I built it as a full-stack system with secure auth, profile onboarding, mutual friend permissions, geolocation-based automatic check-ins, and real-time updates so location and conversations stay in sync instantly. The stack includes a TypeScript/Node backend with Prisma and PostgreSQL, a React frontend deployed on Vercel, and socket-based event delivery for live social coordination.',
+    problem: 'When going out, friends need to quickly answer: where is everyone tonight?',
+    solution:
+      'Built a full-stack mobile-first platform with live bar presence, friend discovery, direct messaging, nudge invites, geolocation-based automatic check-ins, and real-time sync for location and conversations.',
+    impact: 'Enables fast decisions while going out—location and conversations stay in sync instantly.',
+    techStack: ['TypeScript', 'Node.js', 'Prisma', 'PostgreSQL', 'React', 'Vercel', 'WebSockets', 'Geolocation'],
+    liveUrl: 'https://barflowcodex.vercel.app/',
     githubUrl: '#',
     featured: true,
   },
