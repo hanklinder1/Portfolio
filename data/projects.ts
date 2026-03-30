@@ -16,7 +16,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 'bmw',
-    title: 'BMW Manufacturing – Data Valuation & AI Decision Framework',
+    title: 'BMW Manufacturing – Data Valuation & AI Decision Framework (2025–2026)',
     summary: 'Risk-adjusted decision framework built in partnership with BMW to evaluate third-party AI integration into manufacturing operations — combining economic modeling, Monte Carlo simulation, SQL scoring logic, and executive dashboards.',
     description:
       'Selected for a competitive, interdisciplinary research initiative with BMW focused on governing third-party AI integration into proprietary manufacturing systems. Developed economic models and Monte Carlo simulations to quantify the value of BMW\'s proprietary manufacturing data and evaluate financial tradeoffs of granting AI vendors access to sensitive operations. Built a risk-scoring decision model that evaluates data readiness, operational/integration risk, organizational constraints, and risk-adjusted ROI to produce clear adopt/delay/reject recommendations across hundreds of factory variables. Delivered interactive dashboards and web-based tools for both technical teams and executive stakeholders.',

@@ -8,22 +8,22 @@ export default function AboutPage() {
     {
       period: '2022 – 2026',
       title: 'Clemson University',
-      description: 'B.A. Economics, Minor in Spanish Studies. GPA: 3.50. Focus on quantitative analysis, AI systems, and economic modeling.',
+      description: 'B.A. Economics, Minor in Spanish Studies. GPA: 3.50. Built a foundation in quantitative analysis, economic modeling, and data-driven decision making.',
     },
     {
-      period: 'Fall 2025 – Present',
+      period: '2025 – 2026',
       title: 'BMW Research Partnership',
-      description: 'Built risk-adjusted decision frameworks and Monte Carlo simulations for manufacturing AI integration.',
+      description: 'Selected for a competitive research initiative. Built Monte Carlo simulations, risk-adjusted decision frameworks, and executive dashboards for manufacturing AI integration.',
     },
     {
-      period: '2025',
-      title: 'Carteroo & BarFlow',
-      description: 'Launched two full-stack products independently — a nationwide golf cart marketplace and a real-time nightlife coordination app.',
+      period: '2025 – Present',
+      title: 'Independent Product Development',
+      description: 'Designed and launched Carteroo (nationwide golf cart marketplace with Stripe payments) and BarFlow (real-time nightlife coordination app) — both built from scratch as solo projects.',
     },
     {
-      period: 'Summer 2025',
-      title: 'Study Abroad — Spain',
-      description: 'Completed upper-level Spanish coursework, strengthening professional fluency and cross-cultural communication.',
+      period: 'Now',
+      title: 'Seeking Next Opportunity',
+      description: 'Looking for roles at the intersection of economics, data, and product — where I can apply quantitative analysis, AI systems thinking, and full-stack development to solve real problems.',
     },
   ];
 

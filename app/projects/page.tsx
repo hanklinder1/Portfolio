@@ -44,19 +44,7 @@ export default function ProjectsPage() {
                 </div>
               </div>
 
-              {project.id === 'bmw' && (
-                <div className="mb-6 p-4 bg-blue-50 rounded-lg border border-blue-100">
-                  <h3 className="font-semibold text-gray-900 mb-2">SQL & Tableau Decision Dashboard</h3>
-                  <p className="text-gray-500 text-sm mb-3">
-                    Interactive executive decision tool. Plant x technology decision matrix, risk vs. value tradeoffs, and adoption blockers with remediation drivers.
-                  </p>
-                  {project.tableauUrl && project.tableauUrl !== '#' && (
-                    <Button href={project.tableauUrl} variant="primary" external className="text-sm py-2 px-4">
-                      View Tableau Dashboard
-                    </Button>
-                  )}
-                </div>
-              )}
+
 
               <div className="flex flex-wrap gap-3">
                 {project.liveUrl && project.liveUrl !== '#' && (
