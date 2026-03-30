@@ -16,23 +16,23 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm">
+    <nav className="fixed top-0 w-full z-50 bg-gray-950/80 backdrop-blur-md border-b border-white/5">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link href="/" className="text-xl font-bold text-gray-900 hover:text-gray-700 transition-colors">
-            Hank Linder
+          <Link href="/" className="text-lg font-semibold text-white hover:text-cyan-400 transition-colors tracking-tight">
+            HL
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
-            {navLinks.map((link) => (
+            {navLinks.map((link) =>
               link.external ? (
                 <a
                   key={link.href}
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-700 hover:text-gray-900 font-medium transition-colors"
+                  className="text-sm text-gray-400 hover:text-cyan-400 font-medium transition-colors tracking-wide uppercase"
                 >
                   {link.label}
                 </a>
@@ -40,17 +40,17 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-gray-700 hover:text-gray-900 font-medium transition-colors"
+                  className="text-sm text-gray-400 hover:text-cyan-400 font-medium transition-colors tracking-wide uppercase"
                 >
                   {link.label}
                 </Link>
               )
-            ))}
+            )}
           </div>
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden p-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-500"
+            className="md:hidden p-2 rounded-md text-gray-400 hover:text-white hover:bg-white/5 focus:outline-none focus:ring-2 focus:ring-cyan-500"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
             aria-expanded={isOpen}
@@ -75,15 +75,15 @@ export default function Navbar() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden py-4 space-y-2">
-            {navLinks.map((link) => (
+          <div className="md:hidden py-4 space-y-1 border-t border-white/5">
+            {navLinks.map((link) =>
               link.external ? (
                 <a
                   key={link.href}
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block px-3 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-md font-medium transition-colors"
+                  className="block px-3 py-2 text-sm text-gray-400 hover:text-cyan-400 hover:bg-white/5 rounded-md font-medium transition-colors uppercase tracking-wide"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.label}
@@ -92,13 +92,13 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="block px-3 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-md font-medium transition-colors"
+                  className="block px-3 py-2 text-sm text-gray-400 hover:text-cyan-400 hover:bg-white/5 rounded-md font-medium transition-colors uppercase tracking-wide"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.label}
                 </Link>
               )
-            ))}
+            )}
           </div>
         )}
       </div>

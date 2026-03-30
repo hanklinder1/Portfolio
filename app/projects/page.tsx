@@ -6,34 +6,37 @@ import { projects } from '@/data/projects';
 
 export default function ProjectsPage() {
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <SectionHeader 
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24 pt-28">
+      <SectionHeader
         title="Projects"
-        subtitle="A collection of my work in AI-powered decision systems, data analytics, economic modeling, and building deployable AI solutions."
+        subtitle="Decision systems, marketplaces, and AI tools — from concept to production."
       />
-      
-      <div className="space-y-12">
+
+      <div className="space-y-8">
         {projects.map((project) => (
-          <div key={project.id} id={project.id} className="scroll-mt-20">
-            <Card>
+          <div key={project.id} id={project.id} className="scroll-mt-24">
+            <Card hover={false}>
               <div className="mb-4">
-                <h2 className="text-2xl font-bold text-gray-900 mb-2">{project.title}</h2>
-                <p className="text-lg text-gray-600">{project.summary}</p>
+                <h2 className="text-2xl font-bold text-white mb-2">{project.title}</h2>
+                <p className="text-gray-400">{project.summary}</p>
+              </div>
+
+              <div className="mb-6 space-y-4">
+                <div>
+                  <h3 className="font-semibold text-cyan-400 text-sm uppercase tracking-wide mb-1">Problem</h3>
+                  <p className="text-gray-400 text-sm">{project.problem}</p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-cyan-400 text-sm uppercase tracking-wide mb-1">Solution</h3>
+                  <p className="text-gray-400 text-sm">{project.solution}</p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-cyan-400 text-sm uppercase tracking-wide mb-1">Impact</h3>
+                  <p className="text-gray-400 text-sm">{project.impact}</p>
+                </div>
               </div>
 
               <div className="mb-6">
-                <h3 className="font-semibold text-gray-900 mb-2">Problem</h3>
-                <p className="text-gray-600 mb-4">{project.problem}</p>
-                
-                <h3 className="font-semibold text-gray-900 mb-2">Solution</h3>
-                <p className="text-gray-600 mb-4">{project.solution}</p>
-                
-                <h3 className="font-semibold text-gray-900 mb-2">Impact</h3>
-                <p className="text-gray-600 mb-4">{project.impact}</p>
-              </div>
-
-              <div className="mb-6">
-                <h3 className="font-semibold text-gray-900 mb-3">Tech Stack</h3>
                 <div className="flex flex-wrap gap-2">
                   {project.techStack.map((tech) => (
                     <Tag key={tech}>{tech}</Tag>
@@ -42,10 +45,10 @@ export default function ProjectsPage() {
               </div>
 
               {project.id === 'bmw-2026' && (
-                <div className="mb-6 p-4 bg-gray-50 rounded-lg border border-gray-200">
-                  <h3 className="font-semibold text-gray-900 mb-2">SQL & Tableau Decision Dashboard</h3>
-                  <p className="text-gray-600 mb-3">
-                    Interactive executive decision tool built in Tableau. Includes plant × technology decision matrix, risk vs. value tradeoff visualization, and adoption blockers with remediation drivers. Full SQL logic and documentation are available on GitHub.
+                <div className="mb-6 p-4 bg-cyan-500/5 rounded-lg border border-cyan-500/20">
+                  <h3 className="font-semibold text-white mb-2">SQL & Tableau Decision Dashboard</h3>
+                  <p className="text-gray-400 text-sm mb-3">
+                    Interactive executive decision tool. Plant x technology decision matrix, risk vs. value tradeoffs, and adoption blockers with remediation drivers.
                   </p>
                   {project.tableauUrl && project.tableauUrl !== '#' && (
                     <Button href={project.tableauUrl} variant="primary" external className="text-sm py-2 px-4">
@@ -72,7 +75,7 @@ export default function ProjectsPage() {
                   </Button>
                 )}
                 {(!project.liveUrl || project.liveUrl === '#') && (!project.githubUrl || project.githubUrl === '#') && !project.tableauUrl && (
-                  <span className="text-sm text-gray-500 italic">Links coming soon</span>
+                  <span className="text-sm text-gray-600 italic">Links coming soon</span>
                 )}
               </div>
             </Card>

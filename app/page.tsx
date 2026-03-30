@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import Button from '@/components/Button';
 import Card from '@/components/Card';
 import SectionHeader from '@/components/SectionHeader';
@@ -11,131 +10,73 @@ import { skills } from '@/data/skills';
 
 export default function Home() {
   const featuredProjects = projects.filter(p => p.featured);
-  const bmw2026 = projects.find(p => p.id === 'bmw-2026');
-  const stats = [
-    { value: '2+', label: 'projects shipped' },
-    { value: '10+', label: 'dashboards and analytical models across AI valuation, economic modeling, risk frameworks, and operational analytics' },
-    { value: '1+', label: 'stakeholders supported' },
-  ];
 
   return (
     <div className="w-full">
-      {/* Hero Section */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
+      {/* Hero Section - Full Viewport */}
+      <section className="relative min-h-screen flex items-center justify-center bg-grid">
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-950 via-gray-950/50 to-gray-950" />
+
+        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-20 w-full">
+          <div className="flex flex-col items-center text-center">
+            {/* Headshot */}
+            <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 mb-8 animate-fade-in-up">
+              <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full opacity-20 blur-lg" />
+              <Image
+                src="/images/headshot.jpg"
+                alt="Hank Linder"
+                fill
+                className="rounded-full object-cover relative"
+                priority
+              />
+            </div>
+
+            {/* Name & Title */}
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 tracking-tight animate-fade-in-up animate-delay-200">
               Hank Linder
             </h1>
-            <p className="text-xl md:text-2xl text-gray-700 mb-4 font-medium">
-              Economics • Data Analytics • AI & Product
+            <p className="text-lg md:text-xl text-gray-400 mb-3 font-mono tracking-wide animate-fade-in-up animate-delay-400">
+              Economics &middot; AI Systems &middot; Full-Stack Development
             </p>
-            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              I specialize in quantitative analysis, AI system design, and end-to-end architecture—building deployable AI tools and decision systems that translate business problems into structured data frameworks, operationalize analytics, and support practical LLM/RAG integration.
+            <p className="text-gray-500 max-w-xl mb-10 leading-relaxed animate-fade-in-up animate-delay-400">
+              Building decision systems, marketplaces, and AI tools from concept to production.
             </p>
-            <div className="flex flex-wrap gap-4 mb-8">
+
+            {/* CTA Buttons */}
+            <div className="flex flex-wrap justify-center gap-4 animate-fade-in-up animate-delay-600">
               <Button href="/projects" variant="primary">View Projects</Button>
               <Button href="/contact" variant="outline">Contact</Button>
               <Button href="https://github.com/hanklinder1" external variant="secondary">GitHub</Button>
             </div>
-            <div className="flex flex-wrap gap-6 text-sm text-gray-600">
-              {stats.map((stat, index) => (
-                <div key={index}>
-                  <span className="font-bold text-gray-900">{stat.value}</span> {stat.label}
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="relative w-full aspect-square max-w-md mx-auto">
-            <Image
-              src="/images/headshot.jpg"
-              alt="Hank Linder"
-              fill
-              className="rounded-lg object-cover shadow-xl"
-              priority
-            />
           </div>
         </div>
-      </section>
 
-      {/* BMW Partnership Section */}
-      <section className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-20">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-12">
-            <div className="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-semibold mb-4">
-              Clemson University × BMW
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Academic–Industry Partnership
-            </h2>
-          </div>
-
-          {/* 2025 Section */}
-          <div className="mb-12">
-            <h3 className="text-2xl font-bold mb-4">BMW Manufacturing Data Project – 2025</h3>
-            <p className="text-gray-300 max-w-3xl leading-relaxed mb-4">
-              Early phase of the collaboration: exploratory data analysis, learning the manufacturing context, and initial data exploration. This foundational work established the context needed for the 2026 decision framework.
-            </p>
-            <Button href="https://bmw-dashboard.vercel.app/" external variant="secondary" className="bg-white text-gray-900 hover:bg-gray-100 text-sm py-2 px-4">
-              View 2025 Dashboard
-            </Button>
-          </div>
-
-          {/* 2026 Section */}
-          <div className="mb-12">
-            <h3 className="text-2xl font-bold mb-4">BMW Manufacturing Data Valuation & Decision Modeling – 2026</h3>
-            <p className="text-gray-300 max-w-3xl leading-relaxed mb-6">
-              Built an AI-powered risk-adjusted decision framework to evaluate whether manufacturing plants should adopt, delay, or reject third-party technologies. The project focuses on data readiness, operational and integration risk, organizational constraints, and expected economic value (risk-adjusted ROI). This deployable AI solution translates business problems into structured data frameworks, operationalizing analytics for manufacturing technology adoption decisions.
-            </p>
-            <div className="mb-6">
-              <h4 className="font-semibold text-white mb-2">Tech Stack</h4>
-              <p className="text-gray-300">PostgreSQL (Supabase) · SQL (views, scoring logic, scenario parameters) · Tableau Public · GitHub · Vercel</p>
-            </div>
-
-            {/* SQL & Tableau Decision Dashboard */}
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6 mb-6">
-              <h4 className="text-xl font-bold mb-3">SQL & Tableau Decision Dashboard</h4>
-              <p className="text-gray-300 mb-4 leading-relaxed">
-                An interactive executive decision tool built in Tableau. Includes a plant × technology decision matrix, risk vs. value tradeoff visualization, and adoption blockers with remediation drivers. Full SQL logic and documentation are available on GitHub.
-              </p>
-              <div className="flex flex-wrap gap-3">
-                {bmw2026?.tableauUrl && bmw2026.tableauUrl !== '#' && (
-                  <Button href={bmw2026.tableauUrl} external variant="secondary" className="bg-white text-gray-900 hover:bg-gray-100 text-sm py-2 px-4">
-                    Tableau Public Dashboard
-                  </Button>
-                )}
-                <Button href="https://github.com/hanklinder1" external variant="outline" className="border-white text-white hover:bg-white/10 text-sm py-2 px-4">
-                  GitHub (SQL & Docs)
-                </Button>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex flex-wrap gap-4">
-            <Button href="/projects#bmw-2026" variant="outline" className="border-white text-white hover:bg-white/10">
-              Learn More
-            </Button>
-          </div>
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+          <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>
         </div>
       </section>
 
       {/* Featured Projects */}
-      <section className="bg-gray-50 py-20">
+      <section className="py-24 border-t border-white/5">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader title="Featured Projects" />
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-6">
             {featuredProjects.map((project) => (
               <Card key={project.id}>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
-                <p className="text-gray-600 mb-4">{project.summary}</p>
-                <div className="flex flex-wrap gap-2 mb-4">
+                <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
+                <p className="text-gray-400 mb-4 text-sm leading-relaxed">{project.summary}</p>
+                <div className="flex flex-wrap gap-2 mb-5">
                   {project.techStack.slice(0, 3).map((tech) => (
                     <Tag key={tech}>{tech}</Tag>
                   ))}
                 </div>
                 <div className="flex gap-3">
                   {project.liveUrl && project.liveUrl !== '#' && (
-                    <Button href={project.liveUrl} variant="primary" className="text-sm py-2 px-4">
+                    <Button href={project.liveUrl} variant="primary" external className="text-sm py-2 px-4">
                       Live
                     </Button>
                   )}
@@ -145,7 +86,7 @@ export default function Home() {
                     </Button>
                   )}
                   <Button href={`/projects#${project.id}`} variant="secondary" className="text-sm py-2 px-4">
-                    View details
+                    Details
                   </Button>
                 </div>
               </Card>
@@ -155,17 +96,18 @@ export default function Home() {
       </section>
 
       {/* Skills */}
-      <section className="py-20">
+      <section className="py-24 border-t border-white/5">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader title="Skills" />
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {skills.map((category) => (
               <Card key={category.category}>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{category.category}</h3>
+                <h3 className="text-lg font-bold text-white mb-4">{category.category}</h3>
                 <ul className="space-y-2">
                   {category.skills.map((skill) => (
-                    <li key={skill} className="text-gray-600">
-                      • {skill}
+                    <li key={skill} className="text-gray-400 text-sm flex items-start gap-2">
+                      <span className="text-cyan-500 mt-1">&#x25B8;</span>
+                      {skill}
                     </li>
                   ))}
                 </ul>
@@ -176,28 +118,27 @@ export default function Home() {
       </section>
 
       {/* Books & Thinkers */}
-      <section className="bg-gray-50 py-20">
+      <section className="py-24 border-t border-white/5">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeader 
-            title="Books & Thinkers I Learn From"
-            subtitle="I like comparing different frameworks and stress-testing ideas against real-world incentives."
+          <SectionHeader
+            title="Books & Thinkers"
+            subtitle="Frameworks I stress-test against real-world incentives."
           />
-          
+
           <div className="mb-12">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Favorite Books</h3>
             <div className="grid md:grid-cols-2 gap-6">
               {books.map((book) => (
                 <Card key={book.title}>
-                  <h4 className="text-lg font-bold text-gray-900 mb-1">{book.title}</h4>
-                  <p className="text-gray-600 mb-2">{book.author}</p>
-                  <p className="text-sm text-gray-700 italic">&quot;{book.whyItShaped}&quot;</p>
+                  <h4 className="text-lg font-bold text-white mb-1">{book.title}</h4>
+                  <p className="text-cyan-400 text-sm mb-2">{book.author}</p>
+                  <p className="text-sm text-gray-400 italic">&quot;{book.whyItShaped}&quot;</p>
                 </Card>
               ))}
             </div>
           </div>
 
           <div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Economists & Thinkers I Follow</h3>
+            <h3 className="text-xl font-bold text-white mb-4">Economists & Thinkers</h3>
             <div className="flex flex-wrap gap-3">
               {thinkers.map((thinker) => (
                 <Tag key={thinker} className="text-base py-2 px-4">{thinker}</Tag>
@@ -207,27 +148,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Preview */}
-      <section className="py-20">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">About Me</h2>
-            <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              I&apos;m an economics and data analytics professional with a passion for turning complex data into actionable insights. My work combines quantitative analysis, economic modeling, and product thinking to help organizations make better decisions.
-            </p>
-            <Button href="/about" variant="primary">More about me</Button>
-          </div>
-        </div>
-      </section>
-
       {/* Contact CTA */}
-      <section className="bg-gray-900 text-white py-16">
+      <section className="py-24 border-t border-white/5">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Let&apos;s Work Together</h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Let&apos;s Work Together</h2>
+          <p className="text-gray-400 mb-8 max-w-xl mx-auto">
             Have a project in mind? I&apos;d love to hear from you.
           </p>
-          <Button href="/contact" variant="secondary" className="bg-white text-gray-900 hover:bg-gray-100">
+          <Button href="/contact" variant="primary">
             Get in Touch
           </Button>
         </div>

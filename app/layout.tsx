@@ -4,11 +4,11 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: 'Hank Linder | Economics • Data Analytics • AI & Product',
-  description: 'I specialize in quantitative analysis, AI-powered decision systems, Python-based economic modeling, and building deployable AI solutions—translating business problems into structured data frameworks and operationalizing analytics.',
+  title: 'Hank Linder | Economics, AI Systems & Full-Stack Development',
+  description: 'Economics student building decision systems, marketplaces, and AI tools. BMW research partnership, Carteroo marketplace, and more.',
   openGraph: {
-    title: 'Hank Linder | Economics • Data Analytics • AI & Product',
-    description: 'I specialize in quantitative analysis, AI-powered decision systems, Python-based economic modeling, and building deployable AI solutions—translating business problems into structured data frameworks and operationalizing analytics.',
+    title: 'Hank Linder | Economics, AI Systems & Full-Stack Development',
+    description: 'Economics student building decision systems, marketplaces, and AI tools. BMW research partnership, Carteroo marketplace, and more.',
     type: 'website',
   },
 }

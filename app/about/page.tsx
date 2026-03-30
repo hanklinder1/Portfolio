@@ -6,54 +6,55 @@ import Button from '@/components/Button';
 export default function AboutPage() {
   const timeline = [
     {
-      period: 'Clemson University',
-      title: 'Economics & Data Analytics',
-      description: 'Studied economics with a focus on quantitative analysis and data-driven decision making.',
+      period: '2022 – 2026',
+      title: 'Clemson University',
+      description: 'B.A. Economics, Minor in Spanish Studies. GPA: 3.50. Focus on quantitative analysis, AI systems, and economic modeling.',
     },
     {
-      period: 'AI & Data Work',
-      title: 'Economic Modeling & Analytics',
-      description: 'Developed expertise in Python-based economic modeling, cost-benefit analysis, and dashboard development.',
+      period: 'Fall 2025 – Present',
+      title: 'BMW Research Partnership',
+      description: 'Built risk-adjusted decision frameworks and Monte Carlo simulations for manufacturing AI integration.',
     },
     {
-      period: 'BarFlow',
-      title: 'Product Development',
-      description: 'Built location-based social app combining technical skills with product thinking.',
+      period: '2025',
+      title: 'Carteroo & BarFlow',
+      description: 'Launched two full-stack products independently — a nationwide golf cart marketplace and a real-time nightlife coordination app.',
     },
     {
-      period: 'Next Steps',
-      title: 'Looking Forward',
-      description: 'Seeking opportunities to apply economic analysis and data skills to impactful product decisions.',
+      period: 'Summer 2025',
+      title: 'Study Abroad — Spain',
+      description: 'Completed upper-level Spanish coursework, strengthening professional fluency and cross-cultural communication.',
     },
   ];
 
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24 pt-28">
       <SectionHeader title="About Me" />
-      
-      <div className="grid md:grid-cols-2 gap-12 mb-16">
+
+      <div className="grid md:grid-cols-2 gap-12 mb-20">
         <div className="relative w-full aspect-square max-w-md">
+          <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg opacity-20 blur-lg" />
           <Image
             src="/images/headshot.jpg"
             alt="Hank Linder"
             fill
-            className="rounded-lg object-cover shadow-xl"
+            className="rounded-lg object-cover relative"
           />
         </div>
         <div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Hank Linder</h2>
-          <div className="space-y-4 text-gray-600 leading-relaxed">
+          <h2 className="text-2xl font-bold text-white mb-4">Hank Linder</h2>
+          <div className="space-y-4 text-gray-400 leading-relaxed text-sm">
             <p>
-              I&apos;m an economics and data analytics professional with a passion for turning complex data into actionable insights. My work combines quantitative analysis, economic modeling, and product thinking to help organizations make better decisions.
+              Economics student at Clemson specializing in AI-driven decision systems, economic modeling, and applied simulation. I build things — from Monte Carlo models and risk frameworks to full-stack marketplaces and real-time apps.
             </p>
             <p>
-              I specialize in AI system design and end-to-end architecture—building deployable AI tools and decision systems. Whether it&apos;s translating business problems into structured data frameworks, building cost-benefit models, implementing retrieval/semantic search, or preparing practical LLM/RAG integrations, I focus on turning complex challenges into actionable, data-driven systems.
+              My approach combines economic reasoning with hands-on engineering. I think about incentives, trade-offs, and unintended consequences, then build the systems that operationalize those insights.
             </p>
             <p>
-              My approach is grounded in economic principles—thinking systematically about incentives, trade-offs, and unintended consequences. I believe the best solutions come from combining rigorous analysis with practical product thinking.
+              I&apos;ve shipped production applications with real payment infrastructure, built research tools for BMW&apos;s manufacturing operations, and designed AI-powered retrieval systems — all independently, using AI-assisted development.
             </p>
             <p>
-              I&apos;m also passionate about incorporating Spanish into my professional work. As a fluent Spanish speaker with expertise in Spanish business formalities, I&apos;m excited about opportunities to apply my economic and data analytics skills in Spanish-speaking markets and collaborate with international teams. Whether it&apos;s building dashboards, conducting economic analysis, or presenting insights, I&apos;m committed to leveraging my Spanish language skills to create broader impact and reach.
+              Fluent in Spanish with study abroad experience in Spain. Interested in opportunities at the intersection of economics, data, and product.
             </p>
           </div>
           <div className="mt-6">
@@ -62,39 +63,31 @@ export default function AboutPage() {
         </div>
       </div>
 
-      <div className="mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8">Timeline</h2>
-        <div className="space-y-6">
+      <div className="mb-20">
+        <h2 className="text-2xl font-bold text-white mb-8">Timeline</h2>
+        <div className="space-y-6 border-l border-white/10 pl-6">
           {timeline.map((item, index) => (
-            <div key={index} className="flex gap-6">
-              <div className="flex-shrink-0 w-24 text-sm font-medium text-gray-500 pt-1">
-                {item.period}
-              </div>
-              <div className="flex-1">
-                <h3 className="text-lg font-semibold text-gray-900 mb-1">{item.title}</h3>
-                <p className="text-gray-600">{item.description}</p>
-              </div>
+            <div key={index} className="relative">
+              <div className="absolute -left-[29px] top-1.5 w-2.5 h-2.5 rounded-full bg-cyan-500" />
+              <p className="text-cyan-400 text-sm font-mono mb-1">{item.period}</p>
+              <h3 className="text-lg font-semibold text-white mb-1">{item.title}</h3>
+              <p className="text-gray-400 text-sm">{item.description}</p>
             </div>
           ))}
         </div>
       </div>
 
-      <Card>
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">What I&apos;m Looking For</h2>
-        <div className="space-y-3 text-gray-600">
-          <p>
-            I&apos;m seeking opportunities where I can apply my skills in economics, data analytics, and product thinking to solve meaningful problems. I&apos;m particularly interested in roles that involve:
-          </p>
-          <ul className="list-disc list-inside space-y-2 ml-4">
-            <li>Quantitative analysis and economic modeling</li>
-            <li>Data-driven product development</li>
-            <li>Building dashboards and analytical tools</li>
-            <li>Strategic decision-making with data</li>
-            <li>Cross-functional collaboration with engineering and product teams</li>
+      <Card hover={false}>
+        <h2 className="text-2xl font-bold text-white mb-4">What I&apos;m Looking For</h2>
+        <div className="space-y-3 text-gray-400 text-sm">
+          <p>Roles where I can apply economics, data, and product thinking to meaningful problems:</p>
+          <ul className="space-y-2 ml-4">
+            <li className="flex items-start gap-2"><span className="text-cyan-500 mt-0.5">&#x25B8;</span>Quantitative analysis and economic modeling</li>
+            <li className="flex items-start gap-2"><span className="text-cyan-500 mt-0.5">&#x25B8;</span>Data-driven product development</li>
+            <li className="flex items-start gap-2"><span className="text-cyan-500 mt-0.5">&#x25B8;</span>AI system design and deployment</li>
+            <li className="flex items-start gap-2"><span className="text-cyan-500 mt-0.5">&#x25B8;</span>Strategic decision-making with data</li>
+            <li className="flex items-start gap-2"><span className="text-cyan-500 mt-0.5">&#x25B8;</span>Cross-functional collaboration</li>
           </ul>
-          <p className="mt-4">
-            If you&apos;re working on interesting problems at the intersection of economics, data, and product, I&apos;d love to hear from you.
-          </p>
         </div>
         <div className="mt-6">
           <Button href="/contact" variant="primary">Get in Touch</Button>
