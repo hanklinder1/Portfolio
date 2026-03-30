@@ -44,7 +44,7 @@ export default function ProjectsPage() {
                 </div>
               </div>
 
-              {project.id === 'bmw-2026' && (
+              {project.id === 'bmw' && (
                 <div className="mb-6 p-4 bg-blue-50 rounded-lg border border-blue-100">
                   <h3 className="font-semibold text-gray-900 mb-2">SQL & Tableau Decision Dashboard</h3>
                   <p className="text-gray-500 text-sm mb-3">
