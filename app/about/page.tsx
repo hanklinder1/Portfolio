@@ -33,7 +33,7 @@ export default function AboutPage() {
 
       <div className="grid md:grid-cols-2 gap-12 mb-20">
         <div className="relative w-full aspect-square max-w-md">
-          <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg opacity-20 blur-lg" />
+          <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-lg opacity-20 blur-lg" />
           <Image
             src="/images/headshot.jpg"
             alt="Hank Linder"
@@ -42,8 +42,8 @@ export default function AboutPage() {
           />
         </div>
         <div>
-          <h2 className="text-2xl font-bold text-white mb-4">Hank Linder</h2>
-          <div className="space-y-4 text-gray-400 leading-relaxed text-sm">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Hank Linder</h2>
+          <div className="space-y-4 text-gray-500 leading-relaxed text-sm">
             <p>
               Economics student at Clemson specializing in AI-driven decision systems, economic modeling, and applied simulation. I build things — from Monte Carlo models and risk frameworks to full-stack marketplaces and real-time apps.
             </p>
@@ -64,29 +64,29 @@ export default function AboutPage() {
       </div>
 
       <div className="mb-20">
-        <h2 className="text-2xl font-bold text-white mb-8">Timeline</h2>
-        <div className="space-y-6 border-l border-white/10 pl-6">
+        <h2 className="text-2xl font-bold text-gray-900 mb-8">Timeline</h2>
+        <div className="space-y-6 border-l border-gray-200 pl-6">
           {timeline.map((item, index) => (
             <div key={index} className="relative">
-              <div className="absolute -left-[29px] top-1.5 w-2.5 h-2.5 rounded-full bg-cyan-500" />
-              <p className="text-cyan-400 text-sm font-mono mb-1">{item.period}</p>
-              <h3 className="text-lg font-semibold text-white mb-1">{item.title}</h3>
-              <p className="text-gray-400 text-sm">{item.description}</p>
+              <div className="absolute -left-[29px] top-1.5 w-2.5 h-2.5 rounded-full bg-blue-500" />
+              <p className="text-blue-600 text-sm font-mono mb-1">{item.period}</p>
+              <h3 className="text-lg font-semibold text-gray-900 mb-1">{item.title}</h3>
+              <p className="text-gray-500 text-sm">{item.description}</p>
             </div>
           ))}
         </div>
       </div>
 
       <Card hover={false}>
-        <h2 className="text-2xl font-bold text-white mb-4">What I&apos;m Looking For</h2>
-        <div className="space-y-3 text-gray-400 text-sm">
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">What I&apos;m Looking For</h2>
+        <div className="space-y-3 text-gray-500 text-sm">
           <p>Roles where I can apply economics, data, and product thinking to meaningful problems:</p>
           <ul className="space-y-2 ml-4">
-            <li className="flex items-start gap-2"><span className="text-cyan-500 mt-0.5">&#x25B8;</span>Quantitative analysis and economic modeling</li>
-            <li className="flex items-start gap-2"><span className="text-cyan-500 mt-0.5">&#x25B8;</span>Data-driven product development</li>
-            <li className="flex items-start gap-2"><span className="text-cyan-500 mt-0.5">&#x25B8;</span>AI system design and deployment</li>
-            <li className="flex items-start gap-2"><span className="text-cyan-500 mt-0.5">&#x25B8;</span>Strategic decision-making with data</li>
-            <li className="flex items-start gap-2"><span className="text-cyan-500 mt-0.5">&#x25B8;</span>Cross-functional collaboration</li>
+            <li className="flex items-start gap-2"><span className="text-blue-500 mt-0.5">&#x25B8;</span>Quantitative analysis and economic modeling</li>
+            <li className="flex items-start gap-2"><span className="text-blue-500 mt-0.5">&#x25B8;</span>Data-driven product development</li>
+            <li className="flex items-start gap-2"><span className="text-blue-500 mt-0.5">&#x25B8;</span>AI system design and deployment</li>
+            <li className="flex items-start gap-2"><span className="text-blue-500 mt-0.5">&#x25B8;</span>Strategic decision-making with data</li>
+            <li className="flex items-start gap-2"><span className="text-blue-500 mt-0.5">&#x25B8;</span>Cross-functional collaboration</li>
           </ul>
         </div>
         <div className="mt-6">

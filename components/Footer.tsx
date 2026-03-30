@@ -2,13 +2,13 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-white/5 mt-20">
+    <footer className="border-t border-gray-200 mt-20 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-          <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 text-sm text-gray-500">
+          <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 text-sm text-gray-400">
             <a
               href="mailto:hank.linder1@gmail.com"
-              className="hover:text-cyan-400 transition-colors"
+              className="hover:text-blue-600 transition-colors"
               aria-label="Email Hank Linder"
             >
               Email
@@ -17,7 +17,7 @@ export default function Footer() {
               href="https://www.linkedin.com/in/hanklinder"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-cyan-400 transition-colors"
+              className="hover:text-blue-600 transition-colors"
               aria-label="LinkedIn profile"
             >
               LinkedIn
@@ -26,13 +26,13 @@ export default function Footer() {
               href="https://github.com/hanklinder1"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-cyan-400 transition-colors"
+              className="hover:text-blue-600 transition-colors"
               aria-label="GitHub profile"
             >
               GitHub
             </a>
           </div>
-          <p className="text-sm text-gray-600">
+          <p className="text-sm text-gray-400">
             &copy; {currentYear} Hank Linder
           </p>
         </div>

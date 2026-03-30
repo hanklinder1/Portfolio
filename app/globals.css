@@ -4,33 +4,29 @@
 
 @layer base {
   body {
-    @apply bg-gray-950 text-gray-100 antialiased;
+    @apply bg-gray-50 text-gray-900 antialiased;
   }
 }
 
 @layer utilities {
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500;
-  }
-
-  .border-gradient {
-    border-image: linear-gradient(to right, #22d3ee, #3b82f6) 1;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500;
   }
 
   .glow {
-    box-shadow: 0 0 20px rgba(34, 211, 238, 0.15), 0 0 60px rgba(34, 211, 238, 0.05);
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.1), 0 0 60px rgba(59, 130, 246, 0.05);
   }
 
   .glow-sm {
-    box-shadow: 0 0 10px rgba(34, 211, 238, 0.1);
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.08);
   }
 }
 
 /* Subtle grid background */
 .bg-grid {
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
   background-size: 60px 60px;
 }
 
@@ -71,14 +67,14 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #0a0a0f;
+  background: #f9fafb;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
+  background: #d1d5db;
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #334155;
+  background: #9ca3af;
 }

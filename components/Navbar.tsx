@@ -16,10 +16,10 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-gray-950/80 backdrop-blur-md border-b border-white/5">
+    <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-200/60">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link href="/" className="text-lg font-semibold text-white hover:text-cyan-400 transition-colors tracking-tight">
+          <Link href="/" className="text-lg font-semibold text-gray-900 hover:text-blue-600 transition-colors tracking-tight">
             HL
           </Link>
 
@@ -32,7 +32,7 @@ export default function Navbar() {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-gray-400 hover:text-cyan-400 font-medium transition-colors tracking-wide uppercase"
+                  className="text-sm text-gray-500 hover:text-blue-600 font-medium transition-colors tracking-wide uppercase"
                 >
                   {link.label}
                 </a>
@@ -40,7 +40,7 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-sm text-gray-400 hover:text-cyan-400 font-medium transition-colors tracking-wide uppercase"
+                  className="text-sm text-gray-500 hover:text-blue-600 font-medium transition-colors tracking-wide uppercase"
                 >
                   {link.label}
                 </Link>
@@ -50,7 +50,7 @@ export default function Navbar() {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden p-2 rounded-md text-gray-400 hover:text-white hover:bg-white/5 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+            className="md:hidden p-2 rounded-md text-gray-500 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
             aria-expanded={isOpen}
@@ -75,7 +75,7 @@ export default function Navbar() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden py-4 space-y-1 border-t border-white/5">
+          <div className="md:hidden py-4 space-y-1 border-t border-gray-100">
             {navLinks.map((link) =>
               link.external ? (
                 <a
@@ -83,7 +83,7 @@ export default function Navbar() {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block px-3 py-2 text-sm text-gray-400 hover:text-cyan-400 hover:bg-white/5 rounded-md font-medium transition-colors uppercase tracking-wide"
+                  className="block px-3 py-2 text-sm text-gray-500 hover:text-blue-600 hover:bg-gray-50 rounded-md font-medium transition-colors uppercase tracking-wide"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.label}
@@ -92,7 +92,7 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="block px-3 py-2 text-sm text-gray-400 hover:text-cyan-400 hover:bg-white/5 rounded-md font-medium transition-colors uppercase tracking-wide"
+                  className="block px-3 py-2 text-sm text-gray-500 hover:text-blue-600 hover:bg-gray-50 rounded-md font-medium transition-colors uppercase tracking-wide"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.label}

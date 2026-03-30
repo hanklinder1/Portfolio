@@ -37,11 +37,11 @@ export default function ContactPage() {
 
       <div className="grid md:grid-cols-2 gap-8">
         <Card hover={false}>
-          <h2 className="text-xl font-bold text-white mb-6">Send a Message</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-6">Send a Message</h2>
           {submitted ? (
             <div className="text-center py-8">
-              <p className="text-gray-300 mb-4">Your email client should open with a pre-filled message.</p>
-              <p className="text-gray-500 text-sm mb-6">If it doesn&apos;t, email me directly at hank.linder1@gmail.com</p>
+              <p className="text-gray-700 mb-4">Your email client should open with a pre-filled message.</p>
+              <p className="text-gray-400 text-sm mb-6">If it doesn&apos;t, email me directly at hank.linder1@gmail.com</p>
               <Button onClick={() => setSubmitted(false)} variant="outline">
                 Send Another
               </Button>
@@ -49,7 +49,7 @@ export default function ContactPage() {
           ) : (
             <form onSubmit={handleSubmit} className="space-y-5">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-400 mb-1.5">
+                <label htmlFor="name" className="block text-sm font-medium text-gray-600 mb-1.5">
                   Name
                 </label>
                 <input
@@ -59,11 +59,11 @@ export default function ContactPage() {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-600 focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors"
+                  className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-lg text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-400 mb-1.5">
+                <label htmlFor="email" className="block text-sm font-medium text-gray-600 mb-1.5">
                   Email
                 </label>
                 <input
@@ -73,11 +73,11 @@ export default function ContactPage() {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-600 focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors"
+                  className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-lg text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
                 />
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-400 mb-1.5">
+                <label htmlFor="message" className="block text-sm font-medium text-gray-600 mb-1.5">
                   Message
                 </label>
                 <textarea
@@ -87,7 +87,7 @@ export default function ContactPage() {
                   rows={6}
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-600 focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none transition-colors"
+                  className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-lg text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none transition-colors"
                 />
               </div>
               <Button type="submit" variant="primary" className="w-full">
@@ -99,35 +99,35 @@ export default function ContactPage() {
 
         <div className="space-y-6">
           <Card hover={false}>
-            <h2 className="text-xl font-bold text-white mb-4">Contact Info</h2>
+            <h2 className="text-xl font-bold text-gray-900 mb-4">Contact Info</h2>
             <div className="space-y-4">
               <div>
-                <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wide mb-1">Email</h3>
-                <a href="mailto:hank.linder1@gmail.com" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                <h3 className="text-sm font-medium text-gray-400 uppercase tracking-wide mb-1">Email</h3>
+                <a href="mailto:hank.linder1@gmail.com" className="text-gray-700 hover:text-blue-600 transition-colors">
                   hank.linder1@gmail.com
                 </a>
               </div>
               <div>
-                <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wide mb-1">LinkedIn</h3>
-                <a href="https://www.linkedin.com/in/hanklinder" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                <h3 className="text-sm font-medium text-gray-400 uppercase tracking-wide mb-1">LinkedIn</h3>
+                <a href="https://www.linkedin.com/in/hanklinder" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-blue-600 transition-colors">
                   linkedin.com/in/hanklinder
                 </a>
               </div>
               <div>
-                <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wide mb-1">GitHub</h3>
-                <a href="https://github.com/hanklinder1" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                <h3 className="text-sm font-medium text-gray-400 uppercase tracking-wide mb-1">GitHub</h3>
+                <a href="https://github.com/hanklinder1" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-blue-600 transition-colors">
                   github.com/hanklinder1
                 </a>
               </div>
               <div>
-                <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wide mb-1">Phone</h3>
-                <p className="text-gray-300">(619) 701-2551</p>
+                <h3 className="text-sm font-medium text-gray-400 uppercase tracking-wide mb-1">Phone</h3>
+                <p className="text-gray-700">(619) 701-2551</p>
               </div>
             </div>
           </Card>
 
           <Card hover={false}>
-            <p className="text-gray-400 text-sm leading-relaxed">
+            <p className="text-gray-500 text-sm leading-relaxed">
               Open to discussing opportunities in economics, data analytics, AI systems, and product development. Based in Clemson, SC.
             </p>
             <div className="flex gap-3 mt-4">

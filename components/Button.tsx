@@ -20,12 +20,12 @@ export default function Button({
   className = '',
   type = 'button',
 }: ButtonProps) {
-  const baseClasses = 'inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-950';
+  const baseClasses = 'inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2';
 
   const variantClasses = {
-    primary: 'bg-cyan-500 text-gray-950 hover:bg-cyan-400 hover:shadow-lg hover:shadow-cyan-500/20 hover:-translate-y-0.5 focus:ring-cyan-500',
-    secondary: 'bg-white/10 text-gray-100 hover:bg-white/20 hover:shadow-md hover:-translate-y-0.5 focus:ring-gray-500 border border-white/10',
-    outline: 'border border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 hover:border-cyan-400 hover:shadow-md hover:shadow-cyan-500/10 hover:-translate-y-0.5 focus:ring-cyan-500',
+    primary: 'bg-blue-600 text-white hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-500/20 hover:-translate-y-0.5 focus:ring-blue-500',
+    secondary: 'bg-gray-100 text-gray-700 hover:bg-gray-200 hover:shadow-md hover:-translate-y-0.5 focus:ring-gray-400 border border-gray-200',
+    outline: 'border border-blue-300 text-blue-600 hover:bg-blue-50 hover:border-blue-400 hover:shadow-md hover:shadow-blue-500/10 hover:-translate-y-0.5 focus:ring-blue-500',
   };
 
   const classes = `${baseClasses} ${variantClasses[variant]} ${className}`;
