@@ -42,17 +42,4 @@ export const projects: Project[] = [
     liveUrl: 'https://carteroo.com',
     featured: true,
   },
-  {
-    id: 'situational-book-finder',
-    title: 'Semantic Data Retrieval System – AI-Powered Query Engine (In Progress)',
-    summary: 'End-to-end data pipeline and semantic retrieval system that matches user-defined contexts to relevant resources — demonstrating applied analytical skills in data ingestion, vector modeling, and query architecture.',
-    description: 'Building an end-to-end semantic retrieval platform that recommends resources based on context, goals, and intent rather than keyword matching. The system demonstrates applied analytical skills across the full data lifecycle: structured ingestion of large-scale datasets, embedding generation for semantic representation, vector similarity search, and retrieval-augmented generation (RAG) for contextual output. Built on Supabase (PostgreSQL with pgvector), custom Python data pipelines, and a Streamlit interface. Currently expanding toward an LLM-assisted recommendation layer.',
-    problem: 'Standard keyword-based search fails to capture user intent, contextual need, or semantic similarity — producing poor matches when the user knows what they want but not how to describe it precisely.',
-    solution: 'Designed and built an analytical data pipeline: ingest and structure large datasets, generate vector embeddings, run semantic similarity search against a PostgreSQL vector backend, and return context-aligned results. Architecture designed for RAG integration.',
-    impact: 'A deployable analytical tool demonstrating applied proficiency in data pipeline design, quantitative modeling, and decision-support system architecture.',
-    techStack: ['Python', 'Vector Embeddings', 'Semantic Search', 'PostgreSQL', 'Data Pipeline Design', 'RAG Architecture'],
-    liveUrl: undefined,
-    githubUrl: 'https://github.com/hanklinder1',
-    featured: true,
-  },
 ];

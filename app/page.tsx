@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import Button from '@/components/Button';
-import Card from '@/components/Card';
 import SectionHeader from '@/components/SectionHeader';
 import Tag from '@/components/Tag';
 import { projects } from '@/data/projects';
@@ -13,153 +12,175 @@ export default function Home() {
 
   return (
     <div className="w-full">
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center bg-grid bg-white">
-        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-20 w-full">
-          <div className="flex flex-col items-center text-center">
-            {/* Headshot */}
-            <div className="relative w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 mb-8 animate-fade-in-up">
-              <div className="absolute -inset-1 bg-gradient-to-br from-navy-800 to-gold-400 rounded-full opacity-15 blur-lg" />
-              <Image
-                src="/images/headshot.png"
-                alt="Hank Linder"
-                fill
-                className="rounded-full object-cover object-top relative"
-                priority
-              />
-            </div>
 
-            {/* Name & Title */}
-            <h1 className="text-5xl md:text-7xl font-bold font-serif text-navy-900 mb-4 tracking-tight animate-fade-in-up animate-delay-200">
-              Hank Linder
-            </h1>
-            <p className="text-base md:text-lg text-gold-600 mb-3 font-medium tracking-widest uppercase animate-fade-in-up animate-delay-400">
-              Credit Analyst &nbsp;&middot;&nbsp; Economics &nbsp;&middot;&nbsp; Financial Analytics
-            </p>
-            <p className="text-gray-500 max-w-xl mb-10 leading-relaxed animate-fade-in-up animate-delay-400">
-              Economics graduate from Clemson University, now applying financial analysis and credit risk assessment at Consolidated Electrical Distributors in Greenville, SC.
-            </p>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-wrap justify-center gap-4 animate-fade-in-up animate-delay-600">
-              <Button href="/projects" variant="primary">View Work</Button>
-              <Button href="/about" variant="outline">About</Button>
-              <Button href="/contact" variant="secondary">Contact</Button>
-            </div>
+      {/* ── Hero: split-screen ── */}
+      <section className="flex min-h-screen overflow-hidden">
+        {/* Left: text */}
+        <div className="flex flex-col justify-center px-8 sm:px-14 lg:px-20 xl:px-28 pt-20 pb-16 w-full lg:w-1/2">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-gray-400 mb-8 animate-fade-in-up">
+            Credit Analyst &nbsp;·&nbsp; Consolidated Electrical Distributors
+          </p>
+          <h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold font-serif text-gray-950 leading-[0.88] mb-8 animate-fade-in-up animate-delay-200">
+            Hank<br />Linder
+          </h1>
+          <div className="w-10 h-px bg-gray-400 mb-8 animate-fade-in-up animate-delay-200" />
+          <p className="text-base text-gray-600 leading-relaxed max-w-sm mb-10 animate-fade-in-up animate-delay-400">
+            Economics graduate from Clemson University. I apply financial analysis,
+            credit risk assessment, and quantitative modeling to support strategic
+            decisions across a national distribution portfolio.
+          </p>
+          <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-gray-400 mb-10 animate-fade-in-up animate-delay-400">
+            Economics &nbsp;·&nbsp; Financial Analytics &nbsp;·&nbsp; Risk Assessment
+          </p>
+          <div className="flex flex-wrap gap-4 animate-fade-in-up animate-delay-600">
+            <Button href="/projects" variant="primary">View Work</Button>
+            <Button href="/contact" variant="outline">Get in Touch</Button>
           </div>
         </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <svg className="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-          </svg>
+        {/* Right: full photo */}
+        <div className="hidden lg:block relative w-1/2">
+          <Image
+            src="/images/headshot.png"
+            alt="Hank Linder"
+            fill
+            className="object-cover object-top"
+            priority
+          />
         </div>
       </section>
 
-      {/* Featured Work */}
-      <section className="py-24 bg-gray-50 border-t border-gray-200">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* ── Profile section: photo left, text right ── */}
+      <section className="flex flex-col lg:flex-row border-t border-gray-200">
+        <div className="relative w-full lg:w-1/2 aspect-[4/3] lg:aspect-auto lg:min-h-[520px]">
+          <Image
+            src="/images/headshot.png"
+            alt="Hank Linder"
+            fill
+            className="object-cover object-[center_15%]"
+          />
+        </div>
+        <div className="flex flex-col justify-center px-8 sm:px-14 lg:px-16 xl:px-20 py-16 lg:py-20 w-full lg:w-1/2 bg-white">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-gray-400 mb-5">The Profile</p>
+          <h2 className="text-3xl md:text-4xl font-bold font-serif text-gray-950 mb-5 leading-snug">
+            An economics-first approach<br className="hidden xl:block" /> to credit and risk.
+          </h2>
+          <div className="w-10 h-px bg-gray-400 mb-6" />
+          <p className="text-gray-600 leading-relaxed mb-4 max-w-md">
+            Economics graduate from Clemson University currently working as a
+            Credit Analyst at Consolidated Electrical Distributors (CED) in
+            Greenville, SC. I apply financial analysis and risk assessment to
+            support credit decisions across a national distribution portfolio.
+          </p>
+          <p className="text-gray-600 leading-relaxed mb-8 max-w-md">
+            Prior to CED, I led AI optimization research with BMW Manufacturing —
+            building analytical frameworks that translated complex operational data
+            into executive strategy. Fluent in Spanish.
+          </p>
+          <Button href="/about" variant="outline" className="self-start">Full Profile</Button>
+        </div>
+      </section>
+
+      {/* ── Featured Work ── */}
+      <section className="py-24 px-8 sm:px-14 lg:px-20 xl:px-28 bg-[#F7F6F3] border-t border-gray-200">
+        <div className="max-w-4xl">
           <SectionHeader
             title="Featured Work"
             subtitle="Analytical frameworks, risk models, and data-driven research."
           />
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="divide-y divide-gray-200">
             {featuredProjects.map((project) => (
-              <Card key={project.id}>
-                <h3 className="text-xl font-bold font-serif text-navy-900 mb-2">{project.title}</h3>
-                <p className="text-gray-500 mb-4 text-sm leading-relaxed">{project.summary}</p>
-                <div className="flex flex-wrap gap-2 mb-5">
+              <div key={project.id} className="py-10">
+                <div className="flex flex-wrap gap-2 mb-4">
                   {project.techStack.slice(0, 3).map((tech) => (
                     <Tag key={tech}>{tech}</Tag>
                   ))}
                 </div>
-                <div className="flex gap-3">
+                <h3 className="text-xl md:text-2xl font-bold font-serif text-gray-950 mb-3 leading-snug">
+                  {project.title}
+                </h3>
+                <p className="text-gray-500 leading-relaxed mb-6 max-w-2xl">{project.summary}</p>
+                <div className="flex flex-wrap gap-3">
                   {project.liveUrl && project.liveUrl !== '#' && (
-                    <Button href={project.liveUrl} variant="primary" external className="text-sm py-2 px-4">
+                    <Button href={project.liveUrl} variant="primary" external className="text-xs py-2 px-4">
                       View Live
                     </Button>
                   )}
                   {project.tableauUrl && project.tableauUrl !== '#' && (
-                    <Button href={project.tableauUrl} variant="primary" external className="text-sm py-2 px-4">
+                    <Button href={project.tableauUrl} variant="primary" external className="text-xs py-2 px-4">
                       Dashboard
                     </Button>
                   )}
-                  <Button href={`/projects#${project.id}`} variant="outline" className="text-sm py-2 px-4">
+                  <Button href={`/projects#${project.id}`} variant="outline" className="text-xs py-2 px-4">
                     Details
                   </Button>
                 </div>
-              </Card>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Skills */}
-      <section className="py-24 bg-white border-t border-gray-200">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* ── Competencies ── */}
+      <section className="py-24 px-8 sm:px-14 lg:px-20 xl:px-28 bg-white border-t border-gray-200">
+        <div className="max-w-4xl">
           <SectionHeader title="Competencies" />
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
             {skills.map((category) => (
-              <Card key={category.category}>
-                <h3 className="text-base font-bold font-serif text-navy-800 mb-4 pb-2 border-b border-gold-100">{category.category}</h3>
-                <ul className="space-y-2">
+              <div key={category.category}>
+                <h3 className="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400 mb-4">
+                  {category.category}
+                </h3>
+                <ul className="space-y-2.5">
                   {category.skills.map((skill) => (
-                    <li key={skill} className="text-gray-600 text-sm flex items-start gap-2">
-                      <span className="text-gold-500 mt-1 leading-none">&#x25B8;</span>
-                      {skill}
-                    </li>
+                    <li key={skill} className="text-sm text-gray-700 leading-snug">{skill}</li>
                   ))}
                 </ul>
-              </Card>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Books & Thinkers */}
-      <section className="py-24 bg-gray-50 border-t border-gray-200">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* ── Books & Thinkers ── */}
+      <section className="py-24 px-8 sm:px-14 lg:px-20 xl:px-28 bg-[#F7F6F3] border-t border-gray-200">
+        <div className="max-w-4xl">
           <SectionHeader
             title="Books & Thinkers"
             subtitle="Frameworks I stress-test against real-world incentives."
           />
-
-          <div className="mb-12">
-            <div className="grid md:grid-cols-2 gap-6">
-              {books.map((book) => (
-                <Card key={book.title}>
-                  <h4 className="text-lg font-bold font-serif text-navy-900 mb-1">{book.title}</h4>
-                  <p className="text-gold-600 text-sm font-medium mb-2">{book.author}</p>
-                  <p className="text-sm text-gray-500 italic">&quot;{book.whyItShaped}&quot;</p>
-                </Card>
-              ))}
-            </div>
+          <div className="divide-y divide-gray-200 mb-14">
+            {books.map((book) => (
+              <div key={book.title} className="py-8">
+                <h4 className="text-xl font-bold font-serif text-gray-950 mb-1">{book.title}</h4>
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gray-400 mb-3">{book.author}</p>
+                <p className="text-gray-600 italic leading-relaxed max-w-xl">{book.whyItShaped}</p>
+              </div>
+            ))}
           </div>
-
           <div>
-            <h3 className="text-xl font-bold font-serif text-navy-900 mb-4">Economists &amp; Thinkers</h3>
-            <div className="flex flex-wrap gap-3">
+            <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400 mb-4">Economists &amp; Thinkers</p>
+            <div className="flex flex-wrap gap-2">
               {thinkers.map((thinker) => (
-                <Tag key={thinker} className="text-base py-2 px-4">{thinker}</Tag>
+                <Tag key={thinker} className="py-1.5 px-3 text-xs">{thinker}</Tag>
               ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Contact CTA */}
-      <section className="py-24 bg-white border-t border-gray-200">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold font-serif text-navy-900 mb-4">Let&apos;s Connect</h2>
-          <p className="text-gray-500 mb-8 max-w-xl mx-auto">
-            Interested in discussing credit, financial analytics, or potential opportunities? I&apos;d love to hear from you.
+      {/* ── Contact CTA ── */}
+      <section className="py-24 px-8 sm:px-14 lg:px-20 xl:px-28 bg-white border-t border-gray-200">
+        <div className="max-w-2xl">
+          <h2 className="text-3xl md:text-4xl font-bold font-serif text-gray-950 mb-5">Let&apos;s Connect</h2>
+          <div className="w-10 h-px bg-gray-400 mb-6" />
+          <p className="text-gray-500 mb-8 leading-relaxed">
+            Interested in discussing credit, financial analytics, or professional opportunities?
           </p>
-          <Button href="/contact" variant="primary">
-            Get in Touch
-          </Button>
+          <Button href="/contact" variant="primary">Get in Touch</Button>
         </div>
       </section>
+
     </div>
   );
 }

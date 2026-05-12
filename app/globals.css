@@ -4,8 +4,10 @@
 
 @layer base {
   body {
-    @apply bg-gray-50 text-gray-900 antialiased;
+    background-color: #F7F6F3;
+    color: #0F0F0E;
     font-family: var(--font-inter), system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
   }
 }
 
@@ -13,29 +15,13 @@
   .text-gradient {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-navy-800 to-navy-600;
   }
-
-  .glow {
-    box-shadow: 0 0 20px rgba(27, 38, 80, 0.08), 0 0 60px rgba(27, 38, 80, 0.04);
-  }
-
-  .glow-sm {
-    box-shadow: 0 0 10px rgba(27, 38, 80, 0.06);
-  }
-}
-
-/* Fine rule-line grid — evokes structured data, understated */
-.bg-grid {
-  background-image:
-    linear-gradient(rgba(27, 38, 80, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(27, 38, 80, 0.03) 1px, transparent 1px);
-  background-size: 80px 80px;
 }
 
 /* Fade in animation */
 @keyframes fade-in-up {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(16px);
   }
   to {
     opacity: 1;
@@ -44,7 +30,7 @@
 }
 
 .animate-fade-in-up {
-  animation: fade-in-up 0.8s ease-out forwards;
+  animation: fade-in-up 0.7s ease-out forwards;
 }
 
 .animate-delay-200 {
@@ -62,20 +48,20 @@
   opacity: 0;
 }
 
-/* Scrollbar styling */
+/* Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #F9F8F6;
+  background: #F7F6F3;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #D4CBBD;
+  background: #D0C8BE;
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #B8AFA3;
+  background: #B5ADA3;
 }

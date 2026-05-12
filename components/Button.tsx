@@ -20,39 +20,22 @@ export default function Button({
   className = '',
   type = 'button',
 }: ButtonProps) {
-  const baseClasses = 'inline-flex items-center justify-center px-6 py-3 rounded font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2';
+  const baseClasses = 'inline-flex items-center justify-center px-6 py-3 text-sm font-medium tracking-wide transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2';
 
   const variantClasses = {
-    primary: 'bg-navy-800 text-white hover:bg-navy-700 hover:shadow-lg hover:shadow-navy-800/20 hover:-translate-y-0.5 focus:ring-navy-700',
-    secondary: 'bg-gray-100 text-gray-700 hover:bg-gray-200 hover:shadow-md hover:-translate-y-0.5 focus:ring-gray-400 border border-gray-200',
-    outline: 'border border-navy-300 text-navy-700 hover:bg-navy-50 hover:border-navy-400 hover:shadow-md hover:shadow-navy-800/10 hover:-translate-y-0.5 focus:ring-navy-700',
+    primary: 'bg-gray-950 text-white hover:bg-gray-700 focus:ring-gray-700',
+    secondary: 'bg-gray-100 text-gray-700 hover:bg-gray-200 focus:ring-gray-400 border border-gray-200',
+    outline: 'border border-gray-400 text-gray-700 hover:border-gray-900 hover:text-gray-900 focus:ring-gray-700',
   };
 
   const classes = `${baseClasses} ${variantClasses[variant]} ${className}`;
 
   if (href) {
     if (external) {
-      return (
-        <a
-          href={href}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={classes}
-        >
-          {children}
-        </a>
-      );
+      return <a href={href} target="_blank" rel="noopener noreferrer" className={classes}>{children}</a>;
     }
-    return (
-      <Link href={href} className={classes}>
-        {children}
-      </Link>
-    );
+    return <Link href={href} className={classes}>{children}</Link>;
   }
 
-  return (
-    <button type={type} onClick={onClick} className={classes}>
-      {children}
-    </button>
-  );
+  return <button type={type} onClick={onClick} className={classes}>{children}</button>;
 }

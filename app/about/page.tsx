@@ -1,6 +1,4 @@
 import Image from 'next/image';
-import SectionHeader from '@/components/SectionHeader';
-import Card from '@/components/Card';
 import Button from '@/components/Button';
 
 export default function AboutPage() {
@@ -23,71 +21,94 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24 pt-28">
-      <SectionHeader title="About Me" />
+    <div className="pt-14">
 
-      <div className="grid md:grid-cols-2 gap-12 mb-20">
-        <div className="relative w-full aspect-square max-w-md">
-          <div className="absolute -inset-1 bg-gradient-to-br from-navy-800 to-gold-400 rounded opacity-15 blur-lg" />
+      {/* ── Profile hero: photo left, text right ── */}
+      <section className="flex flex-col lg:flex-row border-b border-gray-200 min-h-[70vh]">
+        <div className="relative w-full lg:w-1/2 aspect-[4/3] lg:aspect-auto">
           <Image
             src="/images/headshot.png"
             alt="Hank Linder"
             fill
-            className="rounded object-cover object-top relative"
+            className="object-cover object-[center_15%]"
+            priority
           />
         </div>
-        <div>
-          <h2 className="text-2xl font-bold font-serif text-navy-900 mb-4">Hank Linder</h2>
-          <div className="space-y-4 text-gray-600 leading-relaxed text-sm">
+        <div className="flex flex-col justify-center px-8 sm:px-14 lg:px-16 xl:px-20 py-16 bg-white w-full lg:w-1/2">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-gray-400 mb-5">About</p>
+          <h1 className="text-4xl md:text-5xl font-bold font-serif text-gray-950 mb-5 leading-tight">
+            Hank Linder
+          </h1>
+          <div className="w-10 h-px bg-gray-400 mb-7" />
+          <div className="space-y-4 text-gray-600 leading-relaxed text-sm max-w-md">
             <p>
-              Economics graduate from Clemson University currently working as a Credit Analyst at Consolidated Electrical Distributors (CED) in Greenville, SC. I apply financial analysis and risk assessment to support credit decisions across a national distribution portfolio.
+              Economics graduate from Clemson University currently working as a
+              Credit Analyst at Consolidated Electrical Distributors (CED) in
+              Greenville, SC. I apply financial analysis and risk assessment to
+              support credit decisions across a national distribution portfolio.
             </p>
             <p>
-              Prior to CED, I led AI optimization research with BMW Manufacturing, developing analytical frameworks that translated complex operational data into actionable strategy — including Monte Carlo simulations, risk-scoring models, and executive dashboards for evaluating third-party AI integration decisions.
+              Prior to CED, I led AI optimization research with BMW Manufacturing,
+              developing analytical frameworks that translated complex operational
+              data into actionable strategy — including Monte Carlo simulations,
+              risk-scoring models, and executive dashboards for evaluating
+              third-party AI integration decisions.
             </p>
             <p>
-              My approach is grounded in economic reasoning: I think carefully about incentives, tradeoffs, and the downstream consequences of decisions, then build the analytical tools that make those insights actionable.
-            </p>
-            <p>
-              Fluent in Spanish with study abroad experience in Spain.
+              My approach is grounded in economic reasoning: careful attention to
+              incentives, tradeoffs, and the downstream consequences of decisions.
+              Fluent in Spanish.
             </p>
           </div>
-          <div className="mt-6">
+          <div className="mt-8">
             <Button href="/resume" variant="primary">Download Resume</Button>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="mb-20">
-        <h2 className="text-2xl font-bold font-serif text-navy-900 mb-8">Timeline</h2>
-        <div className="space-y-6 border-l border-gray-200 pl-6">
-          {timeline.map((item, index) => (
-            <div key={index} className="relative">
-              <div className="absolute -left-[29px] top-1.5 w-2.5 h-2.5 rounded-full bg-gold-500" />
-              <p className="text-gold-600 text-sm font-medium mb-1">{item.period}</p>
-              <h3 className="text-lg font-semibold font-serif text-navy-900 mb-1">{item.title}</h3>
-              <p className="text-gray-500 text-sm">{item.description}</p>
-            </div>
-          ))}
+      {/* ── Timeline ── */}
+      <section className="py-24 px-8 sm:px-14 lg:px-20 xl:px-28 bg-[#F7F6F3]">
+        <div className="max-w-3xl">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-gray-400 mb-10">Timeline</p>
+          <div className="space-y-0 border-l border-gray-300 pl-8">
+            {timeline.map((item, index) => (
+              <div key={index} className="relative pb-10 last:pb-0">
+                <div className="absolute -left-[33px] top-1.5 w-2 h-2 rounded-full bg-gray-400" />
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gray-400 mb-2">{item.period}</p>
+                <h3 className="text-lg font-bold font-serif text-gray-950 mb-2">{item.title}</h3>
+                <p className="text-gray-500 text-sm leading-relaxed max-w-xl">{item.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+      </section>
 
-      <Card hover={false}>
-        <h2 className="text-2xl font-bold font-serif text-navy-900 mb-4">What I Bring</h2>
-        <div className="space-y-3 text-gray-600 text-sm">
-          <p>A rigorous, economics-first approach to financial analysis and risk assessment:</p>
-          <ul className="space-y-2 ml-4">
-            <li className="flex items-start gap-2"><span className="text-gold-500 mt-0.5">&#x25B8;</span>Credit risk assessment and financial statement analysis</li>
-            <li className="flex items-start gap-2"><span className="text-gold-500 mt-0.5">&#x25B8;</span>Quantitative modeling and Monte Carlo simulation</li>
-            <li className="flex items-start gap-2"><span className="text-gold-500 mt-0.5">&#x25B8;</span>Data-driven decision frameworks and executive reporting</li>
-            <li className="flex items-start gap-2"><span className="text-gold-500 mt-0.5">&#x25B8;</span>Economic reasoning applied to strategic business problems</li>
-            <li className="flex items-start gap-2"><span className="text-gold-500 mt-0.5">&#x25B8;</span>Cross-functional communication and stakeholder collaboration</li>
+      {/* ── What I Bring ── */}
+      <section className="py-24 px-8 sm:px-14 lg:px-20 xl:px-28 bg-white border-t border-gray-200">
+        <div className="max-w-3xl">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-gray-400 mb-5">What I Bring</p>
+          <h2 className="text-3xl md:text-4xl font-bold font-serif text-gray-950 mb-5 leading-snug">
+            A rigorous, economics-first<br className="hidden md:block" /> approach to financial analysis.
+          </h2>
+          <div className="w-10 h-px bg-gray-400 mb-8" />
+          <ul className="space-y-4 text-gray-600 mb-10">
+            {[
+              'Credit risk assessment and financial statement analysis',
+              'Quantitative modeling and Monte Carlo simulation',
+              'Data-driven decision frameworks and executive reporting',
+              'Economic reasoning applied to strategic business problems',
+              'Cross-functional communication and stakeholder collaboration',
+            ].map((item) => (
+              <li key={item} className="flex items-start gap-4 text-sm leading-relaxed">
+                <span className="mt-1.5 block w-4 h-px bg-gray-400 shrink-0" />
+                {item}
+              </li>
+            ))}
           </ul>
-        </div>
-        <div className="mt-6">
           <Button href="/contact" variant="primary">Get in Touch</Button>
         </div>
-      </Card>
+      </section>
+
     </div>
   );
 }
