@@ -13,38 +13,38 @@ export default function Home() {
 
   return (
     <div className="w-full">
-      {/* Hero Section - Full Viewport */}
+      {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center bg-grid bg-white">
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-20 w-full">
           <div className="flex flex-col items-center text-center">
             {/* Headshot */}
-            <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 mb-8 animate-fade-in-up">
-              <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-full opacity-20 blur-lg" />
+            <div className="relative w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 mb-8 animate-fade-in-up">
+              <div className="absolute -inset-1 bg-gradient-to-br from-navy-800 to-gold-400 rounded-full opacity-15 blur-lg" />
               <Image
-                src="/images/headshot.jpg"
+                src="/images/headshot.png"
                 alt="Hank Linder"
                 fill
-                className="rounded-full object-cover relative"
+                className="rounded-full object-cover object-top relative"
                 priority
               />
             </div>
 
             {/* Name & Title */}
-            <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-4 tracking-tight animate-fade-in-up animate-delay-200">
+            <h1 className="text-5xl md:text-7xl font-bold font-serif text-navy-900 mb-4 tracking-tight animate-fade-in-up animate-delay-200">
               Hank Linder
             </h1>
-            <p className="text-lg md:text-xl text-gray-500 mb-3 font-mono tracking-wide animate-fade-in-up animate-delay-400">
-              Economics &middot; AI Systems &middot; Full-Stack Development
+            <p className="text-base md:text-lg text-gold-600 mb-3 font-medium tracking-widest uppercase animate-fade-in-up animate-delay-400">
+              Credit Analyst &nbsp;&middot;&nbsp; Economics &nbsp;&middot;&nbsp; Financial Analytics
             </p>
-            <p className="text-gray-400 max-w-xl mb-10 leading-relaxed animate-fade-in-up animate-delay-400">
-              Building decision systems, marketplaces, and AI tools from concept to production.
+            <p className="text-gray-500 max-w-xl mb-10 leading-relaxed animate-fade-in-up animate-delay-400">
+              Economics graduate from Clemson University, now applying financial analysis and credit risk assessment at Consolidated Electrical Distributors in Greenville, SC.
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap justify-center gap-4 animate-fade-in-up animate-delay-600">
-              <Button href="/projects" variant="primary">View Projects</Button>
-              <Button href="/contact" variant="outline">Contact</Button>
-              <Button href="https://github.com/hanklinder1" external variant="secondary">GitHub</Button>
+              <Button href="/projects" variant="primary">View Work</Button>
+              <Button href="/about" variant="outline">About</Button>
+              <Button href="/contact" variant="secondary">Contact</Button>
             </div>
           </div>
         </div>
@@ -57,14 +57,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured Projects */}
+      {/* Featured Work */}
       <section className="py-24 bg-gray-50 border-t border-gray-200">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeader title="Featured Projects" />
+          <SectionHeader
+            title="Featured Work"
+            subtitle="Analytical frameworks, risk models, and data-driven research."
+          />
           <div className="grid md:grid-cols-2 gap-6">
             {featuredProjects.map((project) => (
               <Card key={project.id}>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
+                <h3 className="text-xl font-bold font-serif text-navy-900 mb-2">{project.title}</h3>
                 <p className="text-gray-500 mb-4 text-sm leading-relaxed">{project.summary}</p>
                 <div className="flex flex-wrap gap-2 mb-5">
                   {project.techStack.slice(0, 3).map((tech) => (
@@ -74,15 +77,15 @@ export default function Home() {
                 <div className="flex gap-3">
                   {project.liveUrl && project.liveUrl !== '#' && (
                     <Button href={project.liveUrl} variant="primary" external className="text-sm py-2 px-4">
-                      Live
+                      View Live
                     </Button>
                   )}
-                  {project.githubUrl && project.githubUrl !== '#' && (
-                    <Button href={project.githubUrl} variant="outline" external className="text-sm py-2 px-4">
-                      GitHub
+                  {project.tableauUrl && project.tableauUrl !== '#' && (
+                    <Button href={project.tableauUrl} variant="primary" external className="text-sm py-2 px-4">
+                      Dashboard
                     </Button>
                   )}
-                  <Button href={`/projects#${project.id}`} variant="secondary" className="text-sm py-2 px-4">
+                  <Button href={`/projects#${project.id}`} variant="outline" className="text-sm py-2 px-4">
                     Details
                   </Button>
                 </div>
@@ -95,15 +98,15 @@ export default function Home() {
       {/* Skills */}
       <section className="py-24 bg-white border-t border-gray-200">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeader title="Skills" />
+          <SectionHeader title="Competencies" />
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {skills.map((category) => (
               <Card key={category.category}>
-                <h3 className="text-lg font-bold text-gray-900 mb-4">{category.category}</h3>
+                <h3 className="text-base font-bold font-serif text-navy-800 mb-4 pb-2 border-b border-gold-100">{category.category}</h3>
                 <ul className="space-y-2">
                   {category.skills.map((skill) => (
-                    <li key={skill} className="text-gray-500 text-sm flex items-start gap-2">
-                      <span className="text-blue-500 mt-1">&#x25B8;</span>
+                    <li key={skill} className="text-gray-600 text-sm flex items-start gap-2">
+                      <span className="text-gold-500 mt-1 leading-none">&#x25B8;</span>
                       {skill}
                     </li>
                   ))}
@@ -126,8 +129,8 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-6">
               {books.map((book) => (
                 <Card key={book.title}>
-                  <h4 className="text-lg font-bold text-gray-900 mb-1">{book.title}</h4>
-                  <p className="text-blue-600 text-sm mb-2">{book.author}</p>
+                  <h4 className="text-lg font-bold font-serif text-navy-900 mb-1">{book.title}</h4>
+                  <p className="text-gold-600 text-sm font-medium mb-2">{book.author}</p>
                   <p className="text-sm text-gray-500 italic">&quot;{book.whyItShaped}&quot;</p>
                 </Card>
               ))}
@@ -135,7 +138,7 @@ export default function Home() {
           </div>
 
           <div>
-            <h3 className="text-xl font-bold text-gray-900 mb-4">Economists & Thinkers</h3>
+            <h3 className="text-xl font-bold font-serif text-navy-900 mb-4">Economists &amp; Thinkers</h3>
             <div className="flex flex-wrap gap-3">
               {thinkers.map((thinker) => (
                 <Tag key={thinker} className="text-base py-2 px-4">{thinker}</Tag>
@@ -148,9 +151,9 @@ export default function Home() {
       {/* Contact CTA */}
       <section className="py-24 bg-white border-t border-gray-200">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Let&apos;s Work Together</h2>
+          <h2 className="text-3xl md:text-4xl font-bold font-serif text-navy-900 mb-4">Let&apos;s Connect</h2>
           <p className="text-gray-500 mb-8 max-w-xl mx-auto">
-            Have a project in mind? I&apos;d love to hear from you.
+            Interested in discussing credit, financial analytics, or potential opportunities? I&apos;d love to hear from you.
           </p>
           <Button href="/contact" variant="primary">
             Get in Touch

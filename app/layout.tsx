@@ -1,14 +1,28 @@
 import type { Metadata } from 'next'
+import { Playfair_Display, Inter } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  variable: '--font-playfair',
+  weight: ['400', '600', '700'],
+  display: 'swap',
+})
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+})
+
 export const metadata: Metadata = {
-  title: 'Hank Linder | Economics, AI Systems & Full-Stack Development',
-  description: 'Economics student building decision systems, marketplaces, and AI tools. BMW research partnership, Carteroo marketplace, and more.',
+  title: 'Hank Linder | Credit Analyst | Economics & Financial Analytics',
+  description: 'Economics graduate from Clemson University and Credit Analyst at Consolidated Electrical Distributors. Financial analysis, credit risk assessment, and quantitative modeling.',
   openGraph: {
-    title: 'Hank Linder | Economics, AI Systems & Full-Stack Development',
-    description: 'Economics student building decision systems, marketplaces, and AI tools. BMW research partnership, Carteroo marketplace, and more.',
+    title: 'Hank Linder | Credit Analyst | Economics & Financial Analytics',
+    description: 'Economics graduate from Clemson University and Credit Analyst at Consolidated Electrical Distributors. Financial analysis, credit risk assessment, and quantitative modeling.',
     type: 'website',
   },
 }
@@ -20,7 +34,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="min-h-screen flex flex-col">
+      <body className={`${playfair.variable} ${inter.variable} min-h-screen flex flex-col`}>
         <Navbar />
         <main className="flex-grow">{children}</main>
         <Footer />

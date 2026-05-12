@@ -32,12 +32,12 @@ export default function ContactPage() {
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24 pt-28">
       <SectionHeader
         title="Get in Touch"
-        subtitle="Have a project in mind or want to collaborate? I'd love to hear from you."
+        subtitle="Interested in discussing credit, financial analytics, or professional opportunities? I'd love to connect."
       />
 
       <div className="grid md:grid-cols-2 gap-8">
         <Card hover={false}>
-          <h2 className="text-xl font-bold text-gray-900 mb-6">Send a Message</h2>
+          <h2 className="text-xl font-bold font-serif text-navy-900 mb-6">Send a Message</h2>
           {submitted ? (
             <div className="text-center py-8">
               <p className="text-gray-700 mb-4">Your email client should open with a pre-filled message.</p>
@@ -59,7 +59,7 @@ export default function ContactPage() {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-lg text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                  className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-navy-700 focus:border-transparent transition-colors"
                 />
               </div>
               <div>
@@ -73,7 +73,7 @@ export default function ContactPage() {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-lg text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                  className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-navy-700 focus:border-transparent transition-colors"
                 />
               </div>
               <div>
@@ -87,7 +87,7 @@ export default function ContactPage() {
                   rows={6}
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-lg text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none transition-colors"
+                  className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-navy-700 focus:border-transparent resize-none transition-colors"
                 />
               </div>
               <Button type="submit" variant="primary" className="w-full">
@@ -99,25 +99,23 @@ export default function ContactPage() {
 
         <div className="space-y-6">
           <Card hover={false}>
-            <h2 className="text-xl font-bold text-gray-900 mb-4">Contact Info</h2>
+            <h2 className="text-xl font-bold font-serif text-navy-900 mb-4">Contact Info</h2>
             <div className="space-y-4">
               <div>
                 <h3 className="text-sm font-medium text-gray-400 uppercase tracking-wide mb-1">Email</h3>
-                <a href="mailto:hank.linder1@gmail.com" className="text-gray-700 hover:text-blue-600 transition-colors">
+                <a href="mailto:hank.linder1@gmail.com" className="text-gray-700 hover:text-navy-800 transition-colors">
                   hank.linder1@gmail.com
                 </a>
               </div>
               <div>
                 <h3 className="text-sm font-medium text-gray-400 uppercase tracking-wide mb-1">LinkedIn</h3>
-                <a href="https://www.linkedin.com/in/hanklinder" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-blue-600 transition-colors">
+                <a href="https://www.linkedin.com/in/hanklinder" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-navy-800 transition-colors">
                   linkedin.com/in/hanklinder
                 </a>
               </div>
               <div>
-                <h3 className="text-sm font-medium text-gray-400 uppercase tracking-wide mb-1">GitHub</h3>
-                <a href="https://github.com/hanklinder1" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-blue-600 transition-colors">
-                  github.com/hanklinder1
-                </a>
+                <h3 className="text-sm font-medium text-gray-400 uppercase tracking-wide mb-1">Location</h3>
+                <p className="text-gray-700">Greenville, SC</p>
               </div>
               <div>
                 <h3 className="text-sm font-medium text-gray-400 uppercase tracking-wide mb-1">Phone</h3>
@@ -128,7 +126,7 @@ export default function ContactPage() {
 
           <Card hover={false}>
             <p className="text-gray-500 text-sm leading-relaxed">
-              Open to discussing opportunities in economics, data analytics, AI systems, and product development. Based in Clemson, SC.
+              Open to discussing roles in credit analysis, financial analytics, risk assessment, and business operations. Currently based in Greenville, SC.
             </p>
             <div className="flex gap-3 mt-4">
               <Button href="mailto:hank.linder1@gmail.com" variant="primary" className="text-sm py-2 px-4">

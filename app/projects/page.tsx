@@ -8,8 +8,8 @@ export default function ProjectsPage() {
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24 pt-28">
       <SectionHeader
-        title="Projects"
-        subtitle="Decision systems, marketplaces, and AI tools — from concept to production."
+        title="Work & Research"
+        subtitle="Analytical frameworks, risk models, and data-driven research — from concept through delivery."
       />
 
       <div className="space-y-8">
@@ -17,21 +17,21 @@ export default function ProjectsPage() {
           <div key={project.id} id={project.id} className="scroll-mt-24">
             <Card hover={false}>
               <div className="mb-4">
-                <h2 className="text-2xl font-bold text-gray-900 mb-2">{project.title}</h2>
-                <p className="text-gray-500">{project.summary}</p>
+                <h2 className="text-2xl font-bold font-serif text-navy-900 mb-2">{project.title}</h2>
+                <p className="text-gray-600">{project.summary}</p>
               </div>
 
               <div className="mb-6 space-y-4">
                 <div>
-                  <h3 className="font-semibold text-blue-600 text-sm uppercase tracking-wide mb-1">Problem</h3>
+                  <h3 className="font-semibold text-gold-600 text-sm uppercase tracking-wide mb-1">Problem</h3>
                   <p className="text-gray-500 text-sm">{project.problem}</p>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-blue-600 text-sm uppercase tracking-wide mb-1">Solution</h3>
+                  <h3 className="font-semibold text-gold-600 text-sm uppercase tracking-wide mb-1">Approach</h3>
                   <p className="text-gray-500 text-sm">{project.solution}</p>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-blue-600 text-sm uppercase tracking-wide mb-1">Impact</h3>
+                  <h3 className="font-semibold text-gold-600 text-sm uppercase tracking-wide mb-1">Outcome</h3>
                   <p className="text-gray-500 text-sm">{project.impact}</p>
                 </div>
               </div>
@@ -43,8 +43,6 @@ export default function ProjectsPage() {
                   ))}
                 </div>
               </div>
-
-
 
               <div className="flex flex-wrap gap-3">
                 {project.liveUrl && project.liveUrl !== '#' && (
@@ -63,7 +61,7 @@ export default function ProjectsPage() {
                   </Button>
                 )}
                 {(!project.liveUrl || project.liveUrl === '#') && (!project.githubUrl || project.githubUrl === '#') && !project.tableauUrl && (
-                  <span className="text-sm text-gray-400 italic">Links coming soon</span>
+                  <span className="text-sm text-gray-400 italic">In progress</span>
                 )}
               </div>
             </Card>

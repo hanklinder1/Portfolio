@@ -5,29 +5,30 @@
 @layer base {
   body {
     @apply bg-gray-50 text-gray-900 antialiased;
+    font-family: var(--font-inter), system-ui, sans-serif;
   }
 }
 
 @layer utilities {
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-navy-800 to-navy-600;
   }
 
   .glow {
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.1), 0 0 60px rgba(59, 130, 246, 0.05);
+    box-shadow: 0 0 20px rgba(27, 38, 80, 0.08), 0 0 60px rgba(27, 38, 80, 0.04);
   }
 
   .glow-sm {
-    box-shadow: 0 0 10px rgba(59, 130, 246, 0.08);
+    box-shadow: 0 0 10px rgba(27, 38, 80, 0.06);
   }
 }
 
-/* Subtle grid background */
+/* Fine rule-line grid — evokes structured data, understated */
 .bg-grid {
   background-image:
-    linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
-  background-size: 60px 60px;
+    linear-gradient(rgba(27, 38, 80, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(27, 38, 80, 0.03) 1px, transparent 1px);
+  background-size: 80px 80px;
 }
 
 /* Fade in animation */
@@ -67,14 +68,14 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #f9fafb;
+  background: #F9F8F6;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #d1d5db;
+  background: #D4CBBD;
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #9ca3af;
+  background: #B8AFA3;
 }

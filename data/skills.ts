@@ -5,19 +5,41 @@ export interface SkillCategory {
 
 export const skills: SkillCategory[] = [
   {
-    category: 'Technical',
-    skills: ['Python (Pandas/NumPy)', 'SQL', 'Data Visualization', 'Streamlit', 'APIs'],
+    category: 'Financial Analysis',
+    skills: [
+      'Credit Risk Assessment',
+      'Financial Statement Analysis',
+      'Quantitative Modeling',
+      'Monte Carlo Simulation',
+      'Risk-Adjusted Decision Frameworks',
+    ],
   },
   {
-    category: 'Economic/Analytical',
-    skills: ['Cost-benefit analysis', 'Risk modeling', 'Causal reasoning', 'Macro/markets'],
+    category: 'Analytical Tools',
+    skills: [
+      'Python (Pandas, NumPy)',
+      'SQL',
+      'Excel (Advanced Modeling)',
+      'Tableau',
+      'Data Visualization',
+    ],
   },
   {
-    category: 'Product/Workflow',
-    skills: ['GitHub', 'Jira/Agile', 'Excel modeling', 'Documentation', 'Stakeholder comms'],
+    category: 'Business & Strategy',
+    skills: [
+      'Economic Modeling',
+      'Cost-Benefit Analysis',
+      'Stakeholder Communication',
+      'Executive Reporting',
+      'Documentation & Process Design',
+    ],
   },
   {
     category: 'Languages',
-    skills: ['Fluent Spanish', 'Articulate Spanish business formalities', 'English (native)'],
+    skills: [
+      'Spanish (Fluent)',
+      'Business Spanish Formalities',
+      'English (Native)',
+    ],
   },
 ];

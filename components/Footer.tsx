@@ -8,7 +8,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 text-sm text-gray-400">
             <a
               href="mailto:hank.linder1@gmail.com"
-              className="hover:text-blue-600 transition-colors"
+              className="hover:text-navy-800 transition-colors"
               aria-label="Email Hank Linder"
             >
               Email
@@ -17,22 +17,13 @@ export default function Footer() {
               href="https://www.linkedin.com/in/hanklinder"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-blue-600 transition-colors"
+              className="hover:text-navy-800 transition-colors"
               aria-label="LinkedIn profile"
             >
               LinkedIn
             </a>
-            <a
-              href="https://github.com/hanklinder1"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-blue-600 transition-colors"
-              aria-label="GitHub profile"
-            >
-              GitHub
-            </a>
           </div>
-          <p className="text-sm text-gray-400">
+          <p className="text-sm text-gray-400 font-serif">
             &copy; {currentYear} Hank Linder
           </p>
         </div>

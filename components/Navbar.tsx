@@ -8,49 +8,36 @@ export default function Navbar() {
 
   const navLinks = [
     { href: '/', label: 'Home' },
-    { href: '/projects', label: 'Projects' },
+    { href: '/projects', label: 'Work' },
     { href: '/about', label: 'About' },
     { href: '/contact', label: 'Contact' },
-    { href: 'https://github.com/hanklinder1', label: 'GitHub', external: true },
     { href: '/resume', label: 'Resume' },
   ];
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-200/60">
+    <nav className="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-200/60">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link href="/" className="text-lg font-semibold text-gray-900 hover:text-blue-600 transition-colors tracking-tight">
-            HL
+          <Link href="/" className="text-lg font-bold font-serif text-navy-900 hover:text-gold-500 transition-colors tracking-tight">
+            Hank Linder
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
-            {navLinks.map((link) =>
-              link.external ? (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-gray-500 hover:text-blue-600 font-medium transition-colors tracking-wide uppercase"
-                >
-                  {link.label}
-                </a>
-              ) : (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="text-sm text-gray-500 hover:text-blue-600 font-medium transition-colors tracking-wide uppercase"
-                >
-                  {link.label}
-                </Link>
-              )
-            )}
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-sm text-gray-600 hover:text-navy-800 font-medium transition-colors tracking-wide uppercase"
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden p-2 rounded-md text-gray-500 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="md:hidden p-2 rounded text-gray-500 hover:text-navy-800 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-navy-700"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
             aria-expanded={isOpen}
@@ -76,29 +63,16 @@ export default function Navbar() {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden py-4 space-y-1 border-t border-gray-100">
-            {navLinks.map((link) =>
-              link.external ? (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block px-3 py-2 text-sm text-gray-500 hover:text-blue-600 hover:bg-gray-50 rounded-md font-medium transition-colors uppercase tracking-wide"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {link.label}
-                </a>
-              ) : (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="block px-3 py-2 text-sm text-gray-500 hover:text-blue-600 hover:bg-gray-50 rounded-md font-medium transition-colors uppercase tracking-wide"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {link.label}
-                </Link>
-              )
-            )}
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="block px-3 py-2 text-sm text-gray-600 hover:text-navy-800 hover:bg-gray-50 rounded font-medium transition-colors uppercase tracking-wide"
+                onClick={() => setIsOpen(false)}
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
         )}
       </div>

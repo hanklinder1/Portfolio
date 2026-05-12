@@ -12,18 +12,13 @@ export default function AboutPage() {
     },
     {
       period: '2025 – 2026',
-      title: 'BMW Research Partnership',
-      description: 'Selected for a competitive research initiative. Built Monte Carlo simulations, risk-adjusted decision frameworks, and executive dashboards for manufacturing AI integration.',
+      title: 'BMW Manufacturing Research Partnership',
+      description: 'Selected for a competitive, interdisciplinary research initiative. Developed AI-driven analytical frameworks, Monte Carlo simulations, risk-scoring models, and executive dashboards to support manufacturing data strategy at BMW.',
     },
     {
-      period: '2025 – Present',
-      title: 'Independent Product Development',
-      description: 'Designed and launched Carteroo (nationwide golf cart marketplace with Stripe payments) and BarFlow (real-time nightlife coordination app) — both built from scratch as solo projects.',
-    },
-    {
-      period: 'Now',
-      title: 'Seeking Next Opportunity',
-      description: 'Looking for roles at the intersection of economics, data, and product — where I can apply quantitative analysis, AI systems thinking, and full-stack development to solve real problems.',
+      period: 'May 2026 – Present',
+      title: 'Credit Analyst — Consolidated Electrical Distributors (CED)',
+      description: 'Full-time role in Greenville, SC. Applying financial analysis and credit risk assessment to support credit decisions across a national distribution portfolio.',
     },
   ];
 
@@ -33,28 +28,28 @@ export default function AboutPage() {
 
       <div className="grid md:grid-cols-2 gap-12 mb-20">
         <div className="relative w-full aspect-square max-w-md">
-          <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-lg opacity-20 blur-lg" />
+          <div className="absolute -inset-1 bg-gradient-to-br from-navy-800 to-gold-400 rounded opacity-15 blur-lg" />
           <Image
-            src="/images/headshot.jpg"
+            src="/images/headshot.png"
             alt="Hank Linder"
             fill
-            className="rounded-lg object-cover relative"
+            className="rounded object-cover object-top relative"
           />
         </div>
         <div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Hank Linder</h2>
-          <div className="space-y-4 text-gray-500 leading-relaxed text-sm">
+          <h2 className="text-2xl font-bold font-serif text-navy-900 mb-4">Hank Linder</h2>
+          <div className="space-y-4 text-gray-600 leading-relaxed text-sm">
             <p>
-              Economics student at Clemson specializing in AI-driven decision systems, economic modeling, and applied simulation. I build things — from Monte Carlo models and risk frameworks to full-stack marketplaces and real-time apps.
+              Economics graduate from Clemson University currently working as a Credit Analyst at Consolidated Electrical Distributors (CED) in Greenville, SC. I apply financial analysis and risk assessment to support credit decisions across a national distribution portfolio.
             </p>
             <p>
-              My approach combines economic reasoning with hands-on engineering. I think about incentives, trade-offs, and unintended consequences, then build the systems that operationalize those insights.
+              Prior to CED, I led AI optimization research with BMW Manufacturing, developing analytical frameworks that translated complex operational data into actionable strategy — including Monte Carlo simulations, risk-scoring models, and executive dashboards for evaluating third-party AI integration decisions.
             </p>
             <p>
-              I&apos;ve shipped production applications with real payment infrastructure, built research tools for BMW&apos;s manufacturing operations, and designed AI-powered retrieval systems — all independently, using AI-assisted development.
+              My approach is grounded in economic reasoning: I think carefully about incentives, tradeoffs, and the downstream consequences of decisions, then build the analytical tools that make those insights actionable.
             </p>
             <p>
-              Fluent in Spanish with study abroad experience in Spain. Interested in opportunities at the intersection of economics, data, and product.
+              Fluent in Spanish with study abroad experience in Spain.
             </p>
           </div>
           <div className="mt-6">
@@ -64,13 +59,13 @@ export default function AboutPage() {
       </div>
 
       <div className="mb-20">
-        <h2 className="text-2xl font-bold text-gray-900 mb-8">Timeline</h2>
+        <h2 className="text-2xl font-bold font-serif text-navy-900 mb-8">Timeline</h2>
         <div className="space-y-6 border-l border-gray-200 pl-6">
           {timeline.map((item, index) => (
             <div key={index} className="relative">
-              <div className="absolute -left-[29px] top-1.5 w-2.5 h-2.5 rounded-full bg-blue-500" />
-              <p className="text-blue-600 text-sm font-mono mb-1">{item.period}</p>
-              <h3 className="text-lg font-semibold text-gray-900 mb-1">{item.title}</h3>
+              <div className="absolute -left-[29px] top-1.5 w-2.5 h-2.5 rounded-full bg-gold-500" />
+              <p className="text-gold-600 text-sm font-medium mb-1">{item.period}</p>
+              <h3 className="text-lg font-semibold font-serif text-navy-900 mb-1">{item.title}</h3>
               <p className="text-gray-500 text-sm">{item.description}</p>
             </div>
           ))}
@@ -78,15 +73,15 @@ export default function AboutPage() {
       </div>
 
       <Card hover={false}>
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">What I&apos;m Looking For</h2>
-        <div className="space-y-3 text-gray-500 text-sm">
-          <p>Roles where I can apply economics, data, and product thinking to meaningful problems:</p>
+        <h2 className="text-2xl font-bold font-serif text-navy-900 mb-4">What I Bring</h2>
+        <div className="space-y-3 text-gray-600 text-sm">
+          <p>A rigorous, economics-first approach to financial analysis and risk assessment:</p>
           <ul className="space-y-2 ml-4">
-            <li className="flex items-start gap-2"><span className="text-blue-500 mt-0.5">&#x25B8;</span>Quantitative analysis and economic modeling</li>
-            <li className="flex items-start gap-2"><span className="text-blue-500 mt-0.5">&#x25B8;</span>Data-driven product development</li>
-            <li className="flex items-start gap-2"><span className="text-blue-500 mt-0.5">&#x25B8;</span>AI system design and deployment</li>
-            <li className="flex items-start gap-2"><span className="text-blue-500 mt-0.5">&#x25B8;</span>Strategic decision-making with data</li>
-            <li className="flex items-start gap-2"><span className="text-blue-500 mt-0.5">&#x25B8;</span>Cross-functional collaboration</li>
+            <li className="flex items-start gap-2"><span className="text-gold-500 mt-0.5">&#x25B8;</span>Credit risk assessment and financial statement analysis</li>
+            <li className="flex items-start gap-2"><span className="text-gold-500 mt-0.5">&#x25B8;</span>Quantitative modeling and Monte Carlo simulation</li>
+            <li className="flex items-start gap-2"><span className="text-gold-500 mt-0.5">&#x25B8;</span>Data-driven decision frameworks and executive reporting</li>
+            <li className="flex items-start gap-2"><span className="text-gold-500 mt-0.5">&#x25B8;</span>Economic reasoning applied to strategic business problems</li>
+            <li className="flex items-start gap-2"><span className="text-gold-500 mt-0.5">&#x25B8;</span>Cross-functional communication and stakeholder collaboration</li>
           </ul>
         </div>
         <div className="mt-6">
