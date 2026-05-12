@@ -54,10 +54,10 @@ export default function Home() {
       <section className="flex flex-col lg:flex-row border-t border-gray-200">
         <div className="relative w-full lg:w-1/2 aspect-[4/3] lg:aspect-auto lg:min-h-[520px]">
           <Image
-            src="/images/headshot.png"
+            src="/images/100_0569.png"
             alt="Hank Linder"
             fill
-            className="object-cover object-[center_15%]"
+            className="object-cover object-center"
           />
         </div>
         <div className="flex flex-col justify-center px-8 sm:px-14 lg:px-16 xl:px-20 py-16 lg:py-20 w-full lg:w-1/2 bg-white">

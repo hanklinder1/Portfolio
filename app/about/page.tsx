@@ -27,10 +27,10 @@ export default function AboutPage() {
       <section className="flex flex-col lg:flex-row border-b border-gray-200 min-h-[70vh]">
         <div className="relative w-full lg:w-1/2 aspect-[4/3] lg:aspect-auto">
           <Image
-            src="/images/headshot.png"
+            src="/images/100_0569.png"
             alt="Hank Linder"
             fill
-            className="object-cover object-[center_15%]"
+            className="object-cover object-center"
             priority
           />
         </div>
