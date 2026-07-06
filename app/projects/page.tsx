@@ -2,6 +2,11 @@ import Tag from '@/components/Tag';
 import Button from '@/components/Button';
 import { projects } from '@/data/projects';
 
+export const metadata = {
+  title: 'Work & Research | Hank Linder',
+  description: 'Analytical frameworks, risk models, and research projects by Hank Linder — including BMW Manufacturing AI risk work and the Carteroo marketplace.',
+};
+
 export default function ProjectsPage() {
   return (
     <div className="pt-14">
@@ -36,6 +41,18 @@ export default function ProjectsPage() {
               </h2>
               <p className="text-gray-600 leading-relaxed mb-8 max-w-2xl">{project.summary}</p>
 
+              {project.phases && (
+                <div className="grid md:grid-cols-2 gap-6 mb-10">
+                  {project.phases.map((phase) => (
+                    <div key={phase.label} className="bg-white border border-gray-200 p-6">
+                      <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400 mb-2">{phase.label}</p>
+                      <h3 className="text-base font-bold font-serif text-gray-950 mb-2 leading-snug">{phase.title}</h3>
+                      <p className="text-gray-500 text-sm leading-relaxed">{phase.description}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
+
               <div className="grid md:grid-cols-3 gap-8 mb-8">
                 <div>
                   <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400 mb-2">Problem</p>
@@ -57,9 +74,9 @@ export default function ProjectsPage() {
                     View Live
                   </Button>
                 )}
-                {project.tableauUrl && project.tableauUrl !== '#' && (
-                  <Button href={project.tableauUrl} variant="primary" external className="text-xs py-2 px-4">
-                    Tableau Dashboard
+                {project.deckUrl && (
+                  <Button href={project.deckUrl} variant="primary" external className="text-xs py-2 px-4">
+                    View Case Study
                   </Button>
                 )}
                 {project.githubUrl && project.githubUrl !== '#' && (
@@ -67,7 +84,7 @@ export default function ProjectsPage() {
                     GitHub
                   </Button>
                 )}
-                {(!project.liveUrl || project.liveUrl === '#') && (!project.githubUrl || project.githubUrl === '#') && !project.tableauUrl && (
+                {(!project.liveUrl || project.liveUrl === '#') && (!project.githubUrl || project.githubUrl === '#') && !project.deckUrl && (
                   <span className="text-xs text-gray-400 italic">In progress</span>
                 )}
               </div>

@@ -14,9 +14,9 @@ export default function Home() {
     <div className="w-full">
 
       {/* ── Hero: split-screen ── */}
-      <section className="flex min-h-screen overflow-hidden">
+      <section className="flex min-h-0 lg:min-h-screen overflow-hidden">
         {/* Left: text */}
-        <div className="flex flex-col justify-center px-8 sm:px-14 lg:px-20 xl:px-28 pt-20 pb-16 w-full lg:w-1/2">
+        <div className="flex flex-col justify-center px-8 sm:px-14 lg:px-20 xl:px-28 pt-28 pb-20 lg:pt-20 lg:pb-16 w-full lg:w-1/2">
           <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-gray-400 mb-8 animate-fade-in-up">
             Credit Analyst &nbsp;·&nbsp; Consolidated Electrical Distributors
           </p>
@@ -41,7 +41,7 @@ export default function Home() {
         {/* Right: full photo */}
         <div className="hidden lg:block relative w-1/2">
           <Image
-            src="/images/headshot.png"
+            src="/images/headshot.jpg"
             alt="Hank Linder"
             fill
             className="object-cover object-top"
@@ -54,7 +54,7 @@ export default function Home() {
       <section className="flex flex-col lg:flex-row border-t border-gray-200">
         <div className="relative w-full lg:w-1/2 aspect-[4/3] lg:aspect-auto lg:min-h-[520px]">
           <Image
-            src="/images/100_0569.png"
+            src="/images/100_0569.jpg"
             alt="Hank Linder"
             fill
             className="object-cover object-center"
@@ -73,9 +73,9 @@ export default function Home() {
             support credit decisions across a national distribution portfolio.
           </p>
           <p className="text-gray-600 leading-relaxed mb-8 max-w-md">
-            Prior to CED, I led AI optimization research with BMW Manufacturing —
-            building analytical frameworks that translated complex operational data
-            into executive strategy. Fluent in Spanish.
+            I also spent two semesters leading AI risk and data-valuation research
+            with BMW Manufacturing, and independently founded and built Carteroo,
+            a live nationwide marketplace. Fluent in Spanish.
           </p>
           <Button href="/about" variant="outline" className="self-start">Full Profile</Button>
         </div>
@@ -106,9 +106,9 @@ export default function Home() {
                       View Live
                     </Button>
                   )}
-                  {project.tableauUrl && project.tableauUrl !== '#' && (
-                    <Button href={project.tableauUrl} variant="primary" external className="text-xs py-2 px-4">
-                      Dashboard
+                  {project.deckUrl && (
+                    <Button href={project.deckUrl} variant="primary" external className="text-xs py-2 px-4">
+                      Case Study
                     </Button>
                   )}
                   <Button href={`/projects#${project.id}`} variant="outline" className="text-xs py-2 px-4">

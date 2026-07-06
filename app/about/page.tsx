@@ -1,6 +1,11 @@
 import Image from 'next/image';
 import Button from '@/components/Button';
 
+export const metadata = {
+  title: 'About | Hank Linder',
+  description: 'Economics graduate from Clemson University, Credit Analyst at Consolidated Electrical Distributors, and builder of BMW Manufacturing research and the Carteroo marketplace.',
+};
+
 export default function AboutPage() {
   const timeline = [
     {
@@ -27,7 +32,7 @@ export default function AboutPage() {
       <section className="flex flex-col lg:flex-row border-b border-gray-200 min-h-[70vh]">
         <div className="relative w-full lg:w-1/2 aspect-[4/3] lg:aspect-auto">
           <Image
-            src="/images/100_0569.png"
+            src="/images/100_0569.jpg"
             alt="Hank Linder"
             fill
             className="object-cover object-center"
@@ -48,11 +53,17 @@ export default function AboutPage() {
               support credit decisions across a national distribution portfolio.
             </p>
             <p>
-              Prior to CED, I led AI optimization research with BMW Manufacturing,
-              developing analytical frameworks that translated complex operational
-              data into actionable strategy — including Monte Carlo simulations,
-              risk-scoring models, and executive dashboards for evaluating
-              third-party AI integration decisions.
+              Alongside that, I spent two semesters on a research initiative with
+              BMW Manufacturing — first building economic models and Monte Carlo
+              simulations to quantify AI-adoption ROI, then leading the risk-scoring
+              workstream: a confidentiality risk framework and data valuation model
+              addressing third-party AI vendor access and leak exposure.
+            </p>
+            <p>
+              I also independently founded and built Carteroo, a live nationwide
+              marketplace for buying and selling golf carts — formed as an LLC and
+              shipped solo with Next.js, Supabase, and Stripe, now monetized
+              through Stripe-powered featured listings with ongoing SEO work.
             </p>
             <p>
               My approach is grounded in economic reasoning: careful attention to
